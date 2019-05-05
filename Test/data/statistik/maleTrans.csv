@@ -1,0 +1,1157 @@
+id_tinggal;id_lahir;prov_tinggal;prov_lahir;Jumlah Migrasi
+ACEH;ACEH;Aceh;Aceh;2387040
+ACEH;SUMUT;Aceh;Sumatera Utara;58777
+ACEH;SUMBAR;Aceh;Sumatera Barat;6651
+ACEH;RIAU;Aceh;Riau;2252
+ACEH;JAMBI;Aceh;Jambi;375
+ACEH;SUMSEL;Aceh;Sumatera Selatan;1560
+ACEH;BENGKULU;Aceh;Bengkulu;469
+ACEH;LAMPUNG;Aceh;Lampung;1143
+ACEH;BABEL;Aceh;Kep  Bangka Belitung;101
+ACEH;KEPRI;Aceh;Kepulauan Riau;378
+ACEH;JAKARTA;Aceh;DKI Jakarta;2928
+ACEH;JABAR;Aceh;Jawa Barat;4370
+ACEH;JATENG;Aceh;Jawa Tengah;14793
+ACEH;YOGYA;Aceh;DI Yogyakarta;777
+ACEH;JATIM;Aceh;Jawa Timur;6361
+ACEH;BANTEN;Aceh;Banten;893
+ACEH;BALI;Aceh;Bali;NA
+ACEH;NTB;Aceh;Nusa Tenggara Barat;403
+ACEH;NTT;Aceh;Nusa Tenggara Timur;194
+ACEH;KALBAR;Aceh;Kalimantan Barat;14
+ACEH;KALTENG;Aceh;Kalimantan Tengah;NA
+ACEH;KALSEL;Aceh;Kalimantan Selatan;640
+ACEH;KALTIM;Aceh;Kalimantan Timur;494
+ACEH;KALUT;Aceh;Kalimantan Utara;NA
+ACEH;SULUT;Aceh;Sulawesi Utara;NA
+ACEH;SULTENG;Aceh;Sulawesi Tengah;75
+ACEH;SULSEL;Aceh;Sulawesi Selatan;693
+ACEH;SULTENGG;Aceh;Sulawesi Tenggara;75
+ACEH;GORONTALO;Aceh;Gorontalo;83
+ACEH;SULBARAT;Aceh;Sulawesi Barat;75
+ACEH;MALUKU;Aceh;Maluku;11
+ACEH;MALUT;Aceh;Maluku Utara;NA
+ACEH;PAPBAR;Aceh;Papua Barat;NA
+ACEH;PAPUA;Aceh;Papua;49
+SUMUT;ACEH;Bali;Aceh;240
+SUMUT;SUMUT;Bali;Sumatera Utara;4100
+SUMUT;SUMBAR;Bali;Sumatera Barat;1755
+SUMUT;RIAU;Bali;Riau;353
+SUMUT;JAMBI;Bali;Jambi;524
+SUMUT;SUMSEL;Bali;Sumatera Selatan;1200
+SUMUT;BENGKULU;Bali;Bengkulu;NA
+SUMUT;LAMPUNG;Bali;Lampung;2467
+SUMUT;BABEL;Bali;Kep  Bangka Belitung;149
+SUMUT;KEPRI;Bali;Kepulauan Riau;1125
+SUMUT;JAKARTA;Bali;DKI Jakarta;6357
+SUMUT;JABAR;Bali;Jawa Barat;12090
+SUMUT;JATENG;Bali;Jawa Tengah;15313
+SUMUT;YOGYA;Bali;DI Yogyakarta;3970
+SUMUT;JATIM;Bali;Jawa Timur;130800
+SUMUT;BANTEN;Bali;Banten;685
+SUMUT;BALI;Bali;Bali;1868313
+SUMUT;NTB;Bali;Nusa Tenggara Barat;12419
+SUMUT;NTT;Bali;Nusa Tenggara Timur;16936
+SUMUT;KALBAR;Bali;Kalimantan Barat;566
+SUMUT;KALTENG;Bali;Kalimantan Tengah;205
+SUMUT;KALSEL;Bali;Kalimantan Selatan;292
+SUMUT;KALTIM;Bali;Kalimantan Timur;697
+SUMUT;KALUT;Bali;Kalimantan Utara;35
+SUMUT;SULUT;Bali;Sulawesi Utara;823
+SUMUT;SULTENG;Bali;Sulawesi Tengah;916
+SUMUT;SULSEL;Bali;Sulawesi Selatan;2293
+SUMUT;SULTENGG;Bali;Sulawesi Tenggara;552
+SUMUT;GORONTALO;Bali;Gorontalo;194
+SUMUT;SULBARAT;Bali;Sulawesi Barat;137
+SUMUT;MALUKU;Bali;Maluku;755
+SUMUT;MALUT;Bali;Maluku Utara;NA
+SUMUT;PAPBAR;Bali;Papua Barat;NA
+SUMUT;PAPUA;Bali;Papua;867
+SUMBAR;ACEH;Banten;Aceh;7446
+SUMBAR;SUMUT;Banten;Sumatera Utara;49920
+SUMBAR;SUMBAR;Banten;Sumatera Barat;34824
+SUMBAR;RIAU;Banten;Riau;3874
+SUMBAR;JAMBI;Banten;Jambi;3419
+SUMBAR;SUMSEL;Banten;Sumatera Selatan;26372
+SUMBAR;BENGKULU;Banten;Bengkulu;5462
+SUMBAR;LAMPUNG;Banten;Lampung;51565
+SUMBAR;BABEL;Banten;Kep  Bangka Belitung;4562
+SUMBAR;KEPRI;Banten;Kepulauan Riau;1918
+SUMBAR;JAKARTA;Banten;DKI Jakarta;316352
+SUMBAR;JABAR;Banten;Jawa Barat;255606
+SUMBAR;JATENG;Banten;Jawa Tengah;346157
+SUMBAR;YOGYA;Banten;DI Yogyakarta;45798
+SUMBAR;JATIM;Banten;Jawa Timur;95630
+SUMBAR;BANTEN;Banten;Banten;4798345
+SUMBAR;BALI;Banten;Bali;2413
+SUMBAR;NTB;Banten;Nusa Tenggara Barat;5762
+SUMBAR;NTT;Banten;Nusa Tenggara Timur;3581
+SUMBAR;KALBAR;Banten;Kalimantan Barat;9600
+SUMBAR;KALTENG;Banten;Kalimantan Tengah;281
+SUMBAR;KALSEL;Banten;Kalimantan Selatan;2395
+SUMBAR;KALTIM;Banten;Kalimantan Timur;882
+SUMBAR;KALUT;Banten;Kalimantan Utara;NA
+SUMBAR;SULUT;Banten;Sulawesi Utara;1305
+SUMBAR;SULTENG;Banten;Sulawesi Tengah;1960
+SUMBAR;SULSEL;Banten;Sulawesi Selatan;6959
+SUMBAR;SULTENGG;Banten;Sulawesi Tenggara;718
+SUMBAR;GORONTALO;Banten;Gorontalo;424
+SUMBAR;SULBARAT;Banten;Sulawesi Barat;437
+SUMBAR;MALUKU;Banten;Maluku;1453
+SUMBAR;MALUT;Banten;Maluku Utara;831
+SUMBAR;PAPBAR;Banten;Papua Barat;1105
+SUMBAR;PAPUA;Banten;Papua;392
+RIAU;ACEH;Bengkulu;Aceh;1284
+RIAU;SUMUT;Bengkulu;Sumatera Utara;12479
+RIAU;SUMBAR;Bengkulu;Sumatera Barat;14317
+RIAU;RIAU;Bengkulu;Riau;1056
+RIAU;JAMBI;Bengkulu;Jambi;4460
+RIAU;SUMSEL;Bengkulu;Sumatera Selatan;34367
+RIAU;BENGKULU;Bengkulu;Bengkulu;778321
+RIAU;LAMPUNG;Bengkulu;Lampung;20710
+RIAU;BABEL;Bengkulu;Kep  Bangka Belitung;164
+RIAU;KEPRI;Bengkulu;Kepulauan Riau;160
+RIAU;JAKARTA;Bengkulu;DKI Jakarta;3684
+RIAU;JABAR;Bengkulu;Jawa Barat;11214
+RIAU;JATENG;Bengkulu;Jawa Tengah;42176
+RIAU;YOGYA;Bengkulu;DI Yogyakarta;6952
+RIAU;JATIM;Bengkulu;Jawa Timur;19699
+RIAU;BANTEN;Bengkulu;Banten;2908
+RIAU;BALI;Bengkulu;Bali;436
+RIAU;NTB;Bengkulu;Nusa Tenggara Barat;55
+RIAU;NTT;Bengkulu;Nusa Tenggara Timur;NA
+RIAU;KALBAR;Bengkulu;Kalimantan Barat;391
+RIAU;KALTENG;Bengkulu;Kalimantan Tengah;NA
+RIAU;KALSEL;Bengkulu;Kalimantan Selatan;78
+RIAU;KALTIM;Bengkulu;Kalimantan Timur;NA
+RIAU;KALUT;Bengkulu;Kalimantan Utara;116
+RIAU;SULUT;Bengkulu;Sulawesi Utara;NA
+RIAU;SULTENG;Bengkulu;Sulawesi Tengah;NA
+RIAU;SULSEL;Bengkulu;Sulawesi Selatan;199
+RIAU;SULTENGG;Bengkulu;Sulawesi Tenggara;NA
+RIAU;GORONTALO;Bengkulu;Gorontalo;NA
+RIAU;SULBARAT;Bengkulu;Sulawesi Barat;NA
+RIAU;MALUKU;Bengkulu;Maluku;206
+RIAU;MALUT;Bengkulu;Maluku Utara;NA
+RIAU;PAPBAR;Bengkulu;Papua Barat;5
+RIAU;PAPUA;Bengkulu;Papua;NA
+JAMBI;ACEH;DI Yogyakarta;Aceh;1745
+JAMBI;SUMUT;DI Yogyakarta;Sumatera Utara;5125
+JAMBI;SUMBAR;DI Yogyakarta;Sumatera Barat;4141
+JAMBI;RIAU;DI Yogyakarta;Riau;2708
+JAMBI;JAMBI;DI Yogyakarta;Jambi;2496
+JAMBI;SUMSEL;DI Yogyakarta;Sumatera Selatan;9601
+JAMBI;BENGKULU;DI Yogyakarta;Bengkulu;1489
+JAMBI;LAMPUNG;DI Yogyakarta;Lampung;7288
+JAMBI;BABEL;DI Yogyakarta;Kep  Bangka Belitung;1372
+JAMBI;KEPRI;DI Yogyakarta;Kepulauan Riau;1227
+JAMBI;JAKARTA;DI Yogyakarta;DKI Jakarta;16700
+JAMBI;JABAR;DI Yogyakarta;Jawa Barat;23486
+JAMBI;JATENG;DI Yogyakarta;Jawa Tengah;118984
+JAMBI;YOGYA;DI Yogyakarta;DI Yogyakarta;1546046
+JAMBI;JATIM;DI Yogyakarta;Jawa Timur;38555
+JAMBI;BANTEN;DI Yogyakarta;Banten;3023
+JAMBI;BALI;DI Yogyakarta;Bali;1688
+JAMBI;NTB;DI Yogyakarta;Nusa Tenggara Barat;2657
+JAMBI;NTT;DI Yogyakarta;Nusa Tenggara Timur;2897
+JAMBI;KALBAR;DI Yogyakarta;Kalimantan Barat;3711
+JAMBI;KALTENG;DI Yogyakarta;Kalimantan Tengah;887
+JAMBI;KALSEL;DI Yogyakarta;Kalimantan Selatan;1914
+JAMBI;KALTIM;DI Yogyakarta;Kalimantan Timur;2715
+JAMBI;KALUT;DI Yogyakarta;Kalimantan Utara;1269
+JAMBI;SULUT;DI Yogyakarta;Sulawesi Utara;817
+JAMBI;SULTENG;DI Yogyakarta;Sulawesi Tengah;748
+JAMBI;SULSEL;DI Yogyakarta;Sulawesi Selatan;2348
+JAMBI;SULTENGG;DI Yogyakarta;Sulawesi Tenggara;2174
+JAMBI;GORONTALO;DI Yogyakarta;Gorontalo;471
+JAMBI;SULBARAT;DI Yogyakarta;Sulawesi Barat;216
+JAMBI;MALUKU;DI Yogyakarta;Maluku;1542
+JAMBI;MALUT;DI Yogyakarta;Maluku Utara;152
+JAMBI;PAPBAR;DI Yogyakarta;Papua Barat;1455
+JAMBI;PAPUA;DI Yogyakarta;Papua;3190
+SUMSEL;ACEH;DKI Jakarta;Aceh;13487
+SUMSEL;SUMUT;DKI Jakarta;Sumatera Utara;107244
+SUMSEL;SUMBAR;DKI Jakarta;Sumatera Barat;71079
+SUMSEL;RIAU;DKI Jakarta;Riau;12850
+SUMSEL;JAMBI;DKI Jakarta;Jambi;5576
+SUMSEL;SUMSEL;DKI Jakarta;Sumatera Selatan;31502
+SUMSEL;BENGKULU;DKI Jakarta;Bengkulu;3851
+SUMSEL;LAMPUNG;DKI Jakarta;Lampung;38622
+SUMSEL;BABEL;DKI Jakarta;Kep  Bangka Belitung;17545
+SUMSEL;KEPRI;DKI Jakarta;Kepulauan Riau;5081
+SUMSEL;JAKARTA;DKI Jakarta;DKI Jakarta;3321165
+SUMSEL;JABAR;DKI Jakarta;Jawa Barat;356438
+SUMSEL;JATENG;DKI Jakarta;Jawa Tengah;661443
+SUMSEL;YOGYA;DKI Jakarta;DI Yogyakarta;58216
+SUMSEL;JATIM;DKI Jakarta;Jawa Timur;192384
+SUMSEL;BANTEN;DKI Jakarta;Banten;94562
+SUMSEL;BALI;DKI Jakarta;Bali;3779
+SUMSEL;NTB;DKI Jakarta;Nusa Tenggara Barat;8372
+SUMSEL;NTT;DKI Jakarta;Nusa Tenggara Timur;7662
+SUMSEL;KALBAR;DKI Jakarta;Kalimantan Barat;30432
+SUMSEL;KALTENG;DKI Jakarta;Kalimantan Tengah;287
+SUMSEL;KALSEL;DKI Jakarta;Kalimantan Selatan;2297
+SUMSEL;KALTIM;DKI Jakarta;Kalimantan Timur;4015
+SUMSEL;KALUT;DKI Jakarta;Kalimantan Utara;1487
+SUMSEL;SULUT;DKI Jakarta;Sulawesi Utara;7893
+SUMSEL;SULTENG;DKI Jakarta;Sulawesi Tengah;761
+SUMSEL;SULSEL;DKI Jakarta;Sulawesi Selatan;22443
+SUMSEL;SULTENGG;DKI Jakarta;Sulawesi Tenggara;2086
+SUMSEL;GORONTALO;DKI Jakarta;Gorontalo;32
+SUMSEL;SULBARAT;DKI Jakarta;Sulawesi Barat;484
+SUMSEL;MALUKU;DKI Jakarta;Maluku;9206
+SUMSEL;MALUT;DKI Jakarta;Maluku Utara;1992
+SUMSEL;PAPBAR;DKI Jakarta;Papua Barat;996
+SUMSEL;PAPUA;DKI Jakarta;Papua;1373
+BENGKULU;ACEH;Gorontalo;Aceh;NA
+BENGKULU;SUMUT;Gorontalo;Sumatera Utara;478
+BENGKULU;SUMBAR;Gorontalo;Sumatera Barat;321
+BENGKULU;RIAU;Gorontalo;Riau;NA
+BENGKULU;JAMBI;Gorontalo;Jambi;NA
+BENGKULU;SUMSEL;Gorontalo;Sumatera Selatan;25
+BENGKULU;BENGKULU;Gorontalo;Bengkulu;NA
+BENGKULU;LAMPUNG;Gorontalo;Lampung;NA
+BENGKULU;BABEL;Gorontalo;Kep  Bangka Belitung;NA
+BENGKULU;KEPRI;Gorontalo;Kepulauan Riau;NA
+BENGKULU;JAKARTA;Gorontalo;DKI Jakarta;999
+BENGKULU;JABAR;Gorontalo;Jawa Barat;1198
+BENGKULU;JATENG;Gorontalo;Jawa Tengah;1804
+BENGKULU;YOGYA;Gorontalo;DI Yogyakarta;229
+BENGKULU;JATIM;Gorontalo;Jawa Timur;6056
+BENGKULU;BANTEN;Gorontalo;Banten;16
+BENGKULU;BALI;Gorontalo;Bali;190
+BENGKULU;NTB;Gorontalo;Nusa Tenggara Barat;54
+BENGKULU;NTT;Gorontalo;Nusa Tenggara Timur;263
+BENGKULU;KALBAR;Gorontalo;Kalimantan Barat;NA
+BENGKULU;KALTENG;Gorontalo;Kalimantan Tengah;NA
+BENGKULU;KALSEL;Gorontalo;Kalimantan Selatan;16
+BENGKULU;KALTIM;Gorontalo;Kalimantan Timur;183
+BENGKULU;KALUT;Gorontalo;Kalimantan Utara;NA
+BENGKULU;SULUT;Gorontalo;Sulawesi Utara;10662
+BENGKULU;SULTENG;Gorontalo;Sulawesi Tengah;4744
+BENGKULU;SULSEL;Gorontalo;Sulawesi Selatan;3888
+BENGKULU;SULTENGG;Gorontalo;Sulawesi Tenggara;507
+BENGKULU;GORONTALO;Gorontalo;Gorontalo;534475
+BENGKULU;SULBARAT;Gorontalo;Sulawesi Barat;37
+BENGKULU;MALUKU;Gorontalo;Maluku;408
+BENGKULU;MALUT;Gorontalo;Maluku Utara;294
+BENGKULU;PAPBAR;Gorontalo;Papua Barat;45
+BENGKULU;PAPUA;Gorontalo;Papua;NA
+LAMPUNG;ACEH;Jambi;Aceh;4863
+LAMPUNG;SUMUT;Jambi;Sumatera Utara;41721
+LAMPUNG;SUMBAR;Jambi;Sumatera Barat;46951
+LAMPUNG;RIAU;Jambi;Riau;13423
+LAMPUNG;JAMBI;Jambi;Jambi;1358258
+LAMPUNG;SUMSEL;Jambi;Sumatera Selatan;29086
+LAMPUNG;BENGKULU;Jambi;Bengkulu;5138
+LAMPUNG;LAMPUNG;Jambi;Lampung;16415
+LAMPUNG;BABEL;Jambi;Kep  Bangka Belitung;539
+LAMPUNG;KEPRI;Jambi;Kepulauan Riau;817
+LAMPUNG;JAKARTA;Jambi;DKI Jakarta;4404
+LAMPUNG;JABAR;Jambi;Jawa Barat;23137
+LAMPUNG;JATENG;Jambi;Jawa Tengah;118356
+LAMPUNG;YOGYA;Jambi;DI Yogyakarta;12049
+LAMPUNG;JATIM;Jambi;Jawa Timur;42515
+LAMPUNG;BANTEN;Jambi;Banten;1647
+LAMPUNG;BALI;Jambi;Bali;147
+LAMPUNG;NTB;Jambi;Nusa Tenggara Barat;304
+LAMPUNG;NTT;Jambi;Nusa Tenggara Timur;246
+LAMPUNG;KALBAR;Jambi;Kalimantan Barat;196
+LAMPUNG;KALTENG;Jambi;Kalimantan Tengah;723
+LAMPUNG;KALSEL;Jambi;Kalimantan Selatan;661
+LAMPUNG;KALTIM;Jambi;Kalimantan Timur;358
+LAMPUNG;KALUT;Jambi;Kalimantan Utara;NA
+LAMPUNG;SULUT;Jambi;Sulawesi Utara;346
+LAMPUNG;SULTENG;Jambi;Sulawesi Tengah;NA
+LAMPUNG;SULSEL;Jambi;Sulawesi Selatan;10446
+LAMPUNG;SULTENGG;Jambi;Sulawesi Tenggara;166
+LAMPUNG;GORONTALO;Jambi;Gorontalo;NA
+LAMPUNG;SULBARAT;Jambi;Sulawesi Barat;NA
+LAMPUNG;MALUKU;Jambi;Maluku;250
+LAMPUNG;MALUT;Jambi;Maluku Utara;NA
+LAMPUNG;PAPBAR;Jambi;Papua Barat;NA
+LAMPUNG;PAPUA;Jambi;Papua;46
+BABEL;ACEH;Jawa Barat;Aceh;13082
+BABEL;SUMUT;Jawa Barat;Sumatera Utara;150081
+BABEL;SUMBAR;Jawa Barat;Sumatera Barat;92913
+BABEL;RIAU;Jawa Barat;Riau;11671
+BABEL;JAMBI;Jawa Barat;Jambi;13835
+BABEL;SUMSEL;Jawa Barat;Sumatera Selatan;50375
+BABEL;BENGKULU;Jawa Barat;Bengkulu;7130
+BABEL;LAMPUNG;Jawa Barat;Lampung;52184
+BABEL;BABEL;Jawa Barat;Kep  Bangka Belitung;9776
+BABEL;KEPRI;Jawa Barat;Kepulauan Riau;4591
+BABEL;JAKARTA;Jawa Barat;DKI Jakarta;832271
+BABEL;JABAR;Jawa Barat;Jawa Barat;21081537
+BABEL;JATENG;Jawa Barat;Jawa Tengah;824821
+BABEL;YOGYA;Jawa Barat;DI Yogyakarta;96423
+BABEL;JATIM;Jawa Barat;Jawa Timur;243463
+BABEL;BANTEN;Jawa Barat;Banten;86423
+BABEL;BALI;Jawa Barat;Bali;6322
+BABEL;NTB;Jawa Barat;Nusa Tenggara Barat;10316
+BABEL;NTT;Jawa Barat;Nusa Tenggara Timur;8192
+BABEL;KALBAR;Jawa Barat;Kalimantan Barat;15327
+BABEL;KALTENG;Jawa Barat;Kalimantan Tengah;2803
+BABEL;KALSEL;Jawa Barat;Kalimantan Selatan;4662
+BABEL;KALTIM;Jawa Barat;Kalimantan Timur;4700
+BABEL;KALUT;Jawa Barat;Kalimantan Utara;582
+BABEL;SULUT;Jawa Barat;Sulawesi Utara;7732
+BABEL;SULTENG;Jawa Barat;Sulawesi Tengah;1976
+BABEL;SULSEL;Jawa Barat;Sulawesi Selatan;22422
+BABEL;SULTENGG;Jawa Barat;Sulawesi Tenggara;1893
+BABEL;GORONTALO;Jawa Barat;Gorontalo;3173
+BABEL;SULBARAT;Jawa Barat;Sulawesi Barat;NA
+BABEL;MALUKU;Jawa Barat;Maluku;7700
+BABEL;MALUT;Jawa Barat;Maluku Utara;908
+BABEL;PAPBAR;Jawa Barat;Papua Barat;303
+BABEL;PAPUA;Jawa Barat;Papua;1488
+KEPRI;ACEH;Jawa Tengah;Aceh;2096
+KEPRI;SUMUT;Jawa Tengah;Sumatera Utara;12866
+KEPRI;SUMBAR;Jawa Tengah;Sumatera Barat;7634
+KEPRI;RIAU;Jawa Tengah;Riau;3342
+KEPRI;JAMBI;Jawa Tengah;Jambi;3565
+KEPRI;SUMSEL;Jawa Tengah;Sumatera Selatan;12612
+KEPRI;BENGKULU;Jawa Tengah;Bengkulu;3005
+KEPRI;LAMPUNG;Jawa Tengah;Lampung;15123
+KEPRI;BABEL;Jawa Tengah;Kep  Bangka Belitung;1556
+KEPRI;KEPRI;Jawa Tengah;Kepulauan Riau;4639
+KEPRI;JAKARTA;Jawa Tengah;DKI Jakarta;64738
+KEPRI;JABAR;Jawa Tengah;Jawa Barat;112457
+KEPRI;JATENG;Jawa Tengah;Jawa Tengah;16233438
+KEPRI;YOGYA;Jawa Tengah;DI Yogyakarta;71950
+KEPRI;JATIM;Jawa Tengah;Jawa Timur;132424
+KEPRI;BANTEN;Jawa Tengah;Banten;21223
+KEPRI;BALI;Jawa Tengah;Bali;1368
+KEPRI;NTB;Jawa Tengah;Nusa Tenggara Barat;1786
+KEPRI;NTT;Jawa Tengah;Nusa Tenggara Timur;1088
+KEPRI;KALBAR;Jawa Tengah;Kalimantan Barat;4409
+KEPRI;KALTENG;Jawa Tengah;Kalimantan Tengah;3117
+KEPRI;KALSEL;Jawa Tengah;Kalimantan Selatan;4012
+KEPRI;KALTIM;Jawa Tengah;Kalimantan Timur;3821
+KEPRI;KALUT;Jawa Tengah;Kalimantan Utara;540
+KEPRI;SULUT;Jawa Tengah;Sulawesi Utara;3427
+KEPRI;SULTENG;Jawa Tengah;Sulawesi Tengah;506
+KEPRI;SULSEL;Jawa Tengah;Sulawesi Selatan;3232
+KEPRI;SULTENGG;Jawa Tengah;Sulawesi Tenggara;1697
+KEPRI;GORONTALO;Jawa Tengah;Gorontalo;111
+KEPRI;SULBARAT;Jawa Tengah;Sulawesi Barat;256
+KEPRI;MALUKU;Jawa Tengah;Maluku;1691
+KEPRI;MALUT;Jawa Tengah;Maluku Utara;417
+KEPRI;PAPBAR;Jawa Tengah;Papua Barat;242
+KEPRI;PAPUA;Jawa Tengah;Papua;3513
+JAKARTA;ACEH;Jawa Timur;Aceh;2363
+JAKARTA;SUMUT;Jawa Timur;Sumatera Utara;12888
+JAKARTA;SUMBAR;Jawa Timur;Sumatera Barat;3375
+JAKARTA;RIAU;Jawa Timur;Riau;6848
+JAKARTA;JAMBI;Jawa Timur;Jambi;2819
+JAKARTA;SUMSEL;Jawa Timur;Sumatera Selatan;9162
+JAKARTA;BENGKULU;Jawa Timur;Bengkulu;801
+JAKARTA;LAMPUNG;Jawa Timur;Lampung;10243
+JAKARTA;BABEL;Jawa Timur;Kep  Bangka Belitung;1282
+JAKARTA;KEPRI;Jawa Timur;Kepulauan Riau;3292
+JAKARTA;JAKARTA;Jawa Timur;DKI Jakarta;29765
+JAKARTA;JABAR;Jawa Timur;Jawa Barat;45139
+JAKARTA;JATENG;Jawa Timur;Jawa Tengah;184816
+JAKARTA;YOGYA;Jawa Timur;DI Yogyakarta;22184
+JAKARTA;JATIM;Jawa Timur;Jawa Timur;18706523
+JAKARTA;BANTEN;Jawa Timur;Banten;5436
+JAKARTA;BALI;Jawa Timur;Bali;15328
+JAKARTA;NTB;Jawa Timur;Nusa Tenggara Barat;9826
+JAKARTA;NTT;Jawa Timur;Nusa Tenggara Timur;14619
+JAKARTA;KALBAR;Jawa Timur;Kalimantan Barat;6525
+JAKARTA;KALTENG;Jawa Timur;Kalimantan Tengah;4291
+JAKARTA;KALSEL;Jawa Timur;Kalimantan Selatan;9281
+JAKARTA;KALTIM;Jawa Timur;Kalimantan Timur;12784
+JAKARTA;KALUT;Jawa Timur;Kalimantan Utara;1534
+JAKARTA;SULUT;Jawa Timur;Sulawesi Utara;4506
+JAKARTA;SULTENG;Jawa Timur;Sulawesi Tengah;1371
+JAKARTA;SULSEL;Jawa Timur;Sulawesi Selatan;11500
+JAKARTA;SULTENGG;Jawa Timur;Sulawesi Tenggara;1246
+JAKARTA;GORONTALO;Jawa Timur;Gorontalo;1866
+JAKARTA;SULBARAT;Jawa Timur;Sulawesi Barat;543
+JAKARTA;MALUKU;Jawa Timur;Maluku;6399
+JAKARTA;MALUT;Jawa Timur;Maluku Utara;780
+JAKARTA;PAPBAR;Jawa Timur;Papua Barat;447
+JAKARTA;PAPUA;Jawa Timur;Papua;4460
+JABAR;ACEH;Kalimantan Barat;Aceh;313
+JABAR;SUMUT;Kalimantan Barat;Sumatera Utara;8562
+JABAR;SUMBAR;Kalimantan Barat;Sumatera Barat;3118
+JABAR;RIAU;Kalimantan Barat;Riau;1047
+JABAR;JAMBI;Kalimantan Barat;Jambi;526
+JABAR;SUMSEL;Kalimantan Barat;Sumatera Selatan;1222
+JABAR;BENGKULU;Kalimantan Barat;Bengkulu;177
+JABAR;LAMPUNG;Kalimantan Barat;Lampung;1862
+JABAR;BABEL;Kalimantan Barat;Kep  Bangka Belitung;424
+JABAR;KEPRI;Kalimantan Barat;Kepulauan Riau;673
+JABAR;JAKARTA;Kalimantan Barat;DKI Jakarta;4525
+JABAR;JABAR;Kalimantan Barat;Jawa Barat;17845
+JABAR;JATENG;Kalimantan Barat;Jawa Tengah;52501
+JABAR;YOGYA;Kalimantan Barat;DI Yogyakarta;8027
+JABAR;JATIM;Kalimantan Barat;Jawa Timur;47378
+JABAR;BANTEN;Kalimantan Barat;Banten;2438
+JABAR;BALI;Kalimantan Barat;Bali;501
+JABAR;NTB;Kalimantan Barat;Nusa Tenggara Barat;3009
+JABAR;NTT;Kalimantan Barat;Nusa Tenggara Timur;3822
+JABAR;KALBAR;Kalimantan Barat;Kalimantan Barat;2270696
+JABAR;KALTENG;Kalimantan Barat;Kalimantan Tengah;1317
+JABAR;KALSEL;Kalimantan Barat;Kalimantan Selatan;1635
+JABAR;KALTIM;Kalimantan Barat;Kalimantan Timur;467
+JABAR;KALUT;Kalimantan Barat;Kalimantan Utara;23
+JABAR;SULUT;Kalimantan Barat;Sulawesi Utara;309
+JABAR;SULTENG;Kalimantan Barat;Sulawesi Tengah;240
+JABAR;SULSEL;Kalimantan Barat;Sulawesi Selatan;2723
+JABAR;SULTENGG;Kalimantan Barat;Sulawesi Tenggara;223
+JABAR;GORONTALO;Kalimantan Barat;Gorontalo;NA
+JABAR;SULBARAT;Kalimantan Barat;Sulawesi Barat;11
+JABAR;MALUKU;Kalimantan Barat;Maluku;519
+JABAR;MALUT;Kalimantan Barat;Maluku Utara;NA
+JABAR;PAPBAR;Kalimantan Barat;Papua Barat;NA
+JABAR;PAPUA;Kalimantan Barat;Papua;291
+JATENG;ACEH;Kalimantan Selatan;Aceh;913
+JATENG;SUMUT;Kalimantan Selatan;Sumatera Utara;3946
+JATENG;SUMBAR;Kalimantan Selatan;Sumatera Barat;1136
+JATENG;RIAU;Kalimantan Selatan;Riau;351
+JATENG;JAMBI;Kalimantan Selatan;Jambi;419
+JATENG;SUMSEL;Kalimantan Selatan;Sumatera Selatan;890
+JATENG;BENGKULU;Kalimantan Selatan;Bengkulu;147
+JATENG;LAMPUNG;Kalimantan Selatan;Lampung;1877
+JATENG;BABEL;Kalimantan Selatan;Kep  Bangka Belitung;148
+JATENG;KEPRI;Kalimantan Selatan;Kepulauan Riau;103
+JATENG;JAKARTA;Kalimantan Selatan;DKI Jakarta;3368
+JATENG;JABAR;Kalimantan Selatan;Jawa Barat;13871
+JATENG;JATENG;Kalimantan Selatan;Jawa Tengah;54184
+JATENG;YOGYA;Kalimantan Selatan;DI Yogyakarta;9067
+JATENG;JATIM;Kalimantan Selatan;Jawa Timur;102996
+JATENG;BANTEN;Kalimantan Selatan;Banten;1567
+JATENG;BALI;Kalimantan Selatan;Bali;2064
+JATENG;NTB;Kalimantan Selatan;Nusa Tenggara Barat;5283
+JATENG;NTT;Kalimantan Selatan;Nusa Tenggara Timur;4286
+JATENG;KALBAR;Kalimantan Selatan;Kalimantan Barat;1770
+JATENG;KALTENG;Kalimantan Selatan;Kalimantan Tengah;25575
+JATENG;KALSEL;Kalimantan Selatan;Kalimantan Selatan;1745444
+JATENG;KALTIM;Kalimantan Selatan;Kalimantan Timur;10426
+JATENG;KALUT;Kalimantan Selatan;Kalimantan Utara;788
+JATENG;SULUT;Kalimantan Selatan;Sulawesi Utara;1557
+JATENG;SULTENG;Kalimantan Selatan;Sulawesi Tengah;1068
+JATENG;SULSEL;Kalimantan Selatan;Sulawesi Selatan;19238
+JATENG;SULTENGG;Kalimantan Selatan;Sulawesi Tenggara;588
+JATENG;GORONTALO;Kalimantan Selatan;Gorontalo;118
+JATENG;SULBARAT;Kalimantan Selatan;Sulawesi Barat;2782
+JATENG;MALUKU;Kalimantan Selatan;Maluku;489
+JATENG;MALUT;Kalimantan Selatan;Maluku Utara;139
+JATENG;PAPBAR;Kalimantan Selatan;Papua Barat;74
+JATENG;PAPUA;Kalimantan Selatan;Papua;82
+YOGYA;ACEH;Kalimantan Tengah;Aceh;125
+YOGYA;SUMUT;Kalimantan Tengah;Sumatera Utara;5354
+YOGYA;SUMBAR;Kalimantan Tengah;Sumatera Barat;609
+YOGYA;RIAU;Kalimantan Tengah;Riau;1550
+YOGYA;JAMBI;Kalimantan Tengah;Jambi;947
+YOGYA;SUMSEL;Kalimantan Tengah;Sumatera Selatan;924
+YOGYA;BENGKULU;Kalimantan Tengah;Bengkulu;258
+YOGYA;LAMPUNG;Kalimantan Tengah;Lampung;2137
+YOGYA;BABEL;Kalimantan Tengah;Kep  Bangka Belitung;NA
+YOGYA;KEPRI;Kalimantan Tengah;Kepulauan Riau;278
+YOGYA;JAKARTA;Kalimantan Tengah;DKI Jakarta;1404
+YOGYA;JABAR;Kalimantan Tengah;Jawa Barat;14483
+YOGYA;JATENG;Kalimantan Tengah;Jawa Tengah;79450
+YOGYA;YOGYA;Kalimantan Tengah;DI Yogyakarta;5766
+YOGYA;JATIM;Kalimantan Tengah;Jawa Timur;83554
+YOGYA;BANTEN;Kalimantan Tengah;Banten;2130
+YOGYA;BALI;Kalimantan Tengah;Bali;1273
+YOGYA;NTB;Kalimantan Tengah;Nusa Tenggara Barat;5306
+YOGYA;NTT;Kalimantan Tengah;Nusa Tenggara Timur;6227
+YOGYA;KALBAR;Kalimantan Tengah;Kalimantan Barat;4306
+YOGYA;KALTENG;Kalimantan Tengah;Kalimantan Tengah;1010443
+YOGYA;KALSEL;Kalimantan Tengah;Kalimantan Selatan;66540
+YOGYA;KALTIM;Kalimantan Tengah;Kalimantan Timur;821
+YOGYA;KALUT;Kalimantan Tengah;Kalimantan Utara;168
+YOGYA;SULUT;Kalimantan Tengah;Sulawesi Utara;359
+YOGYA;SULTENG;Kalimantan Tengah;Sulawesi Tengah;142
+YOGYA;SULSEL;Kalimantan Tengah;Sulawesi Selatan;2794
+YOGYA;SULTENGG;Kalimantan Tengah;Sulawesi Tenggara;NA
+YOGYA;GORONTALO;Kalimantan Tengah;Gorontalo;83
+YOGYA;SULBARAT;Kalimantan Tengah;Sulawesi Barat;321
+YOGYA;MALUKU;Kalimantan Tengah;Maluku;337
+YOGYA;MALUT;Kalimantan Tengah;Maluku Utara;210
+YOGYA;PAPBAR;Kalimantan Tengah;Papua Barat;62
+YOGYA;PAPUA;Kalimantan Tengah;Papua;138
+JATIM;ACEH;Kalimantan Timur;Aceh;808
+JATIM;SUMUT;Kalimantan Timur;Sumatera Utara;13364
+JATIM;SUMBAR;Kalimantan Timur;Sumatera Barat;2404
+JATIM;RIAU;Kalimantan Timur;Riau;1124
+JATIM;JAMBI;Kalimantan Timur;Jambi;914
+JATIM;SUMSEL;Kalimantan Timur;Sumatera Selatan;1951
+JATIM;BENGKULU;Kalimantan Timur;Bengkulu;453
+JATIM;LAMPUNG;Kalimantan Timur;Lampung;3584
+JATIM;BABEL;Kalimantan Timur;Kep  Bangka Belitung;1153
+JATIM;KEPRI;Kalimantan Timur;Kepulauan Riau;34
+JATIM;JAKARTA;Kalimantan Timur;DKI Jakarta;4139
+JATIM;JABAR;Kalimantan Timur;Jawa Barat;20771
+JATIM;JATENG;Kalimantan Timur;Jawa Tengah;67470
+JATIM;YOGYA;Kalimantan Timur;DI Yogyakarta;8841
+JATIM;JATIM;Kalimantan Timur;Jawa Timur;193362
+JATIM;BANTEN;Kalimantan Timur;Banten;472
+JATIM;BALI;Kalimantan Timur;Bali;4998
+JATIM;NTB;Kalimantan Timur;Nusa Tenggara Barat;14658
+JATIM;NTT;Kalimantan Timur;Nusa Tenggara Timur;13459
+JATIM;KALBAR;Kalimantan Timur;Kalimantan Barat;1120
+JATIM;KALTENG;Kalimantan Timur;Kalimantan Tengah;5351
+JATIM;KALSEL;Kalimantan Timur;Kalimantan Selatan;48411
+JATIM;KALTIM;Kalimantan Timur;Kalimantan Timur;1189253
+JATIM;KALUT;Kalimantan Timur;Kalimantan Utara;9823
+JATIM;SULUT;Kalimantan Timur;Sulawesi Utara;7913
+JATIM;SULTENG;Kalimantan Timur;Sulawesi Tengah;6762
+JATIM;SULSEL;Kalimantan Timur;Sulawesi Selatan;139610
+JATIM;SULTENGG;Kalimantan Timur;Sulawesi Tenggara;9831
+JATIM;GORONTALO;Kalimantan Timur;Gorontalo;1244
+JATIM;SULBARAT;Kalimantan Timur;Sulawesi Barat;13220
+JATIM;MALUKU;Kalimantan Timur;Maluku;2483
+JATIM;MALUT;Kalimantan Timur;Maluku Utara;270
+JATIM;PAPBAR;Kalimantan Timur;Papua Barat;202
+JATIM;PAPUA;Kalimantan Timur;Papua;399
+BANTEN;ACEH;Kalimantan Utara;Aceh;79
+BANTEN;SUMUT;Kalimantan Utara;Sumatera Utara;604
+BANTEN;SUMBAR;Kalimantan Utara;Sumatera Barat;454
+BANTEN;RIAU;Kalimantan Utara;Riau;229
+BANTEN;JAMBI;Kalimantan Utara;Jambi;239
+BANTEN;SUMSEL;Kalimantan Utara;Sumatera Selatan;186
+BANTEN;BENGKULU;Kalimantan Utara;Bengkulu;NA
+BANTEN;LAMPUNG;Kalimantan Utara;Lampung;840
+BANTEN;BABEL;Kalimantan Utara;Kep  Bangka Belitung;159
+BANTEN;KEPRI;Kalimantan Utara;Kepulauan Riau;NA
+BANTEN;JAKARTA;Kalimantan Utara;DKI Jakarta;526
+BANTEN;JABAR;Kalimantan Utara;Jawa Barat;1331
+BANTEN;JATENG;Kalimantan Utara;Jawa Tengah;7091
+BANTEN;YOGYA;Kalimantan Utara;DI Yogyakarta;262
+BANTEN;JATIM;Kalimantan Utara;Jawa Timur;19025
+BANTEN;BANTEN;Kalimantan Utara;Banten;364
+BANTEN;BALI;Kalimantan Utara;Bali;228
+BANTEN;NTB;Kalimantan Utara;Nusa Tenggara Barat;911
+BANTEN;NTT;Kalimantan Utara;Nusa Tenggara Timur;4504
+BANTEN;KALBAR;Kalimantan Utara;Kalimantan Barat;262
+BANTEN;KALTENG;Kalimantan Utara;Kalimantan Tengah;116
+BANTEN;KALSEL;Kalimantan Utara;Kalimantan Selatan;1176
+BANTEN;KALTIM;Kalimantan Utara;Kalimantan Timur;6726
+BANTEN;KALUT;Kalimantan Utara;Kalimantan Utara;234477
+BANTEN;SULUT;Kalimantan Utara;Sulawesi Utara;622
+BANTEN;SULTENG;Kalimantan Utara;Sulawesi Tengah;4543
+BANTEN;SULSEL;Kalimantan Utara;Sulawesi Selatan;47210
+BANTEN;SULTENGG;Kalimantan Utara;Sulawesi Tenggara;1466
+BANTEN;GORONTALO;Kalimantan Utara;Gorontalo;25
+BANTEN;SULBARAT;Kalimantan Utara;Sulawesi Barat;2478
+BANTEN;MALUKU;Kalimantan Utara;Maluku;134
+BANTEN;MALUT;Kalimantan Utara;Maluku Utara;NA
+BANTEN;PAPBAR;Kalimantan Utara;Papua Barat;88
+BANTEN;PAPUA;Kalimantan Utara;Papua;12
+BALI;ACEH;Kep  Bangka Belitung;Aceh;308
+BALI;SUMUT;Kep  Bangka Belitung;Sumatera Utara;3329
+BALI;SUMBAR;Kep  Bangka Belitung;Sumatera Barat;1652
+BALI;RIAU;Kep  Bangka Belitung;Riau;610
+BALI;JAMBI;Kep  Bangka Belitung;Jambi;1139
+BALI;SUMSEL;Kep  Bangka Belitung;Sumatera Selatan;27021
+BALI;BENGKULU;Kep  Bangka Belitung;Bengkulu;813
+BALI;LAMPUNG;Kep  Bangka Belitung;Lampung;9562
+BALI;BABEL;Kep  Bangka Belitung;Kep  Bangka Belitung;607311
+BALI;KEPRI;Kep  Bangka Belitung;Kepulauan Riau;1540
+BALI;JAKARTA;Kep  Bangka Belitung;DKI Jakarta;3818
+BALI;JABAR;Kep  Bangka Belitung;Jawa Barat;8887
+BALI;JATENG;Kep  Bangka Belitung;Jawa Tengah;15685
+BALI;YOGYA;Kep  Bangka Belitung;DI Yogyakarta;1351
+BALI;JATIM;Kep  Bangka Belitung;Jawa Timur;12920
+BALI;BANTEN;Kep  Bangka Belitung;Banten;2952
+BALI;BALI;Kep  Bangka Belitung;Bali;1348
+BALI;NTB;Kep  Bangka Belitung;Nusa Tenggara Barat;747
+BALI;NTT;Kep  Bangka Belitung;Nusa Tenggara Timur;1401
+BALI;KALBAR;Kep  Bangka Belitung;Kalimantan Barat;1998
+BALI;KALTENG;Kep  Bangka Belitung;Kalimantan Tengah;NA
+BALI;KALSEL;Kep  Bangka Belitung;Kalimantan Selatan;170
+BALI;KALTIM;Kep  Bangka Belitung;Kalimantan Timur;NA
+BALI;KALUT;Kep  Bangka Belitung;Kalimantan Utara;27
+BALI;SULUT;Kep  Bangka Belitung;Sulawesi Utara;449
+BALI;SULTENG;Kep  Bangka Belitung;Sulawesi Tengah;56
+BALI;SULSEL;Kep  Bangka Belitung;Sulawesi Selatan;4660
+BALI;SULTENGG;Kep  Bangka Belitung;Sulawesi Tenggara;1218
+BALI;GORONTALO;Kep  Bangka Belitung;Gorontalo;NA
+BALI;SULBARAT;Kep  Bangka Belitung;Sulawesi Barat;NA
+BALI;MALUKU;Kep  Bangka Belitung;Maluku;298
+BALI;MALUT;Kep  Bangka Belitung;Maluku Utara;6
+BALI;PAPBAR;Kep  Bangka Belitung;Papua Barat;68
+BALI;PAPUA;Kep  Bangka Belitung;Papua;148
+NTB;ACEH;Kepulauan Riau;Aceh;8319
+NTB;SUMUT;Kepulauan Riau;Sumatera Utara;101691
+NTB;SUMBAR;Kepulauan Riau;Sumatera Barat;60557
+NTB;RIAU;Kepulauan Riau;Riau;43048
+NTB;JAMBI;Kepulauan Riau;Jambi;11440
+NTB;SUMSEL;Kepulauan Riau;Sumatera Selatan;29544
+NTB;BENGKULU;Kepulauan Riau;Bengkulu;2536
+NTB;LAMPUNG;Kepulauan Riau;Lampung;6359
+NTB;BABEL;Kepulauan Riau;Kep  Bangka Belitung;3105
+NTB;KEPRI;Kepulauan Riau;Kepulauan Riau;551731
+NTB;JAKARTA;Kepulauan Riau;DKI Jakarta;8971
+NTB;JABAR;Kepulauan Riau;Jawa Barat;22356
+NTB;JATENG;Kepulauan Riau;Jawa Tengah;57183
+NTB;YOGYA;Kepulauan Riau;DI Yogyakarta;4680
+NTB;JATIM;Kepulauan Riau;Jawa Timur;54864
+NTB;BANTEN;Kepulauan Riau;Banten;453
+NTB;BALI;Kepulauan Riau;Bali;382
+NTB;NTB;Kepulauan Riau;Nusa Tenggara Barat;3741
+NTB;NTT;Kepulauan Riau;Nusa Tenggara Timur;11958
+NTB;KALBAR;Kepulauan Riau;Kalimantan Barat;3234
+NTB;KALTENG;Kepulauan Riau;Kalimantan Tengah;69
+NTB;KALSEL;Kepulauan Riau;Kalimantan Selatan;1171
+NTB;KALTIM;Kepulauan Riau;Kalimantan Timur;748
+NTB;KALUT;Kepulauan Riau;Kalimantan Utara;NA
+NTB;SULUT;Kepulauan Riau;Sulawesi Utara;3035
+NTB;SULTENG;Kepulauan Riau;Sulawesi Tengah;583
+NTB;SULSEL;Kepulauan Riau;Sulawesi Selatan;10299
+NTB;SULTENGG;Kepulauan Riau;Sulawesi Tenggara;1932
+NTB;GORONTALO;Kepulauan Riau;Gorontalo;NA
+NTB;SULBARAT;Kepulauan Riau;Sulawesi Barat;NA
+NTB;MALUKU;Kepulauan Riau;Maluku;980
+NTB;MALUT;Kepulauan Riau;Maluku Utara;263
+NTB;PAPBAR;Kepulauan Riau;Papua Barat;NA
+NTB;PAPUA;Kepulauan Riau;Papua;NA
+NTT;ACEH;Lampung;Aceh;1331
+NTT;SUMUT;Lampung;Sumatera Utara;14053
+NTT;SUMBAR;Lampung;Sumatera Barat;10498
+NTT;RIAU;Lampung;Riau;1047
+NTT;JAMBI;Lampung;Jambi;2181
+NTT;SUMSEL;Lampung;Sumatera Selatan;68689
+NTT;BENGKULU;Lampung;Bengkulu;4986
+NTT;LAMPUNG;Lampung;Lampung;3452382
+NTT;BABEL;Lampung;Kep  Bangka Belitung;1959
+NTT;KEPRI;Lampung;Kepulauan Riau;752
+NTT;JAKARTA;Lampung;DKI Jakarta;14250
+NTT;JABAR;Lampung;Jawa Barat;72499
+NTT;JATENG;Lampung;Jawa Tengah;230955
+NTT;YOGYA;Lampung;DI Yogyakarta;48432
+NTT;JATIM;Lampung;Jawa Timur;185256
+NTT;BANTEN;Lampung;Banten;33291
+NTT;BALI;Lampung;Bali;11124
+NTT;NTB;Lampung;Nusa Tenggara Barat;22
+NTT;NTT;Lampung;Nusa Tenggara Timur;101
+NTT;KALBAR;Lampung;Kalimantan Barat;387
+NTT;KALTENG;Lampung;Kalimantan Tengah;237
+NTT;KALSEL;Lampung;Kalimantan Selatan;178
+NTT;KALTIM;Lampung;Kalimantan Timur;610
+NTT;KALUT;Lampung;Kalimantan Utara;NA
+NTT;SULUT;Lampung;Sulawesi Utara;336
+NTT;SULTENG;Lampung;Sulawesi Tengah;126
+NTT;SULSEL;Lampung;Sulawesi Selatan;4300
+NTT;SULTENGG;Lampung;Sulawesi Tenggara;169
+NTT;GORONTALO;Lampung;Gorontalo;279
+NTT;SULBARAT;Lampung;Sulawesi Barat;79
+NTT;MALUKU;Lampung;Maluku;259
+NTT;MALUT;Lampung;Maluku Utara;NA
+NTT;PAPBAR;Lampung;Papua Barat;NA
+NTT;PAPUA;Lampung;Papua;138
+KALBAR;ACEH;Maluku;Aceh;223
+KALBAR;SUMUT;Maluku;Sumatera Utara;374
+KALBAR;SUMBAR;Maluku;Sumatera Barat;133
+KALBAR;RIAU;Maluku;Riau;288
+KALBAR;JAMBI;Maluku;Jambi;NA
+KALBAR;SUMSEL;Maluku;Sumatera Selatan;126
+KALBAR;BENGKULU;Maluku;Bengkulu;NA
+KALBAR;LAMPUNG;Maluku;Lampung;515
+KALBAR;BABEL;Maluku;Kep  Bangka Belitung;44
+KALBAR;KEPRI;Maluku;Kepulauan Riau;NA
+KALBAR;JAKARTA;Maluku;DKI Jakarta;2272
+KALBAR;JABAR;Maluku;Jawa Barat;3512
+KALBAR;JATENG;Maluku;Jawa Tengah;8585
+KALBAR;YOGYA;Maluku;DI Yogyakarta;910
+KALBAR;JATIM;Maluku;Jawa Timur;13246
+KALBAR;BANTEN;Maluku;Banten;689
+KALBAR;BALI;Maluku;Bali;256
+KALBAR;NTB;Maluku;Nusa Tenggara Barat;375
+KALBAR;NTT;Maluku;Nusa Tenggara Timur;2559
+KALBAR;KALBAR;Maluku;Kalimantan Barat;285
+KALBAR;KALTENG;Maluku;Kalimantan Tengah;NA
+KALBAR;KALSEL;Maluku;Kalimantan Selatan;9
+KALBAR;KALTIM;Maluku;Kalimantan Timur;167
+KALBAR;KALUT;Maluku;Kalimantan Utara;NA
+KALBAR;SULUT;Maluku;Sulawesi Utara;1361
+KALBAR;SULTENG;Maluku;Sulawesi Tengah;367
+KALBAR;SULSEL;Maluku;Sulawesi Selatan;9153
+KALBAR;SULTENGG;Maluku;Sulawesi Tenggara;17233
+KALBAR;GORONTALO;Maluku;Gorontalo;207
+KALBAR;SULBARAT;Maluku;Sulawesi Barat;116
+KALBAR;MALUKU;Maluku;Maluku;778833
+KALBAR;MALUT;Maluku;Maluku Utara;4339
+KALBAR;PAPBAR;Maluku;Papua Barat;1005
+KALBAR;PAPUA;Maluku;Papua;2032
+KALTENG;ACEH;Maluku Utara;Aceh;76
+KALTENG;SUMUT;Maluku Utara;Sumatera Utara;776
+KALTENG;SUMBAR;Maluku Utara;Sumatera Barat;654
+KALTENG;RIAU;Maluku Utara;Riau;184
+KALTENG;JAMBI;Maluku Utara;Jambi;109
+KALTENG;SUMSEL;Maluku Utara;Sumatera Selatan;379
+KALTENG;BENGKULU;Maluku Utara;Bengkulu;NA
+KALTENG;LAMPUNG;Maluku Utara;Lampung;203
+KALTENG;BABEL;Maluku Utara;Kep  Bangka Belitung;NA
+KALTENG;KEPRI;Maluku Utara;Kepulauan Riau;54
+KALTENG;JAKARTA;Maluku Utara;DKI Jakarta;526
+KALTENG;JABAR;Maluku Utara;Jawa Barat;2285
+KALTENG;JATENG;Maluku Utara;Jawa Tengah;4315
+KALTENG;YOGYA;Maluku Utara;DI Yogyakarta;56
+KALTENG;JATIM;Maluku Utara;Jawa Timur;7486
+KALTENG;BANTEN;Maluku Utara;Banten;262
+KALTENG;BALI;Maluku Utara;Bali;NA
+KALTENG;NTB;Maluku Utara;Nusa Tenggara Barat;11
+KALTENG;NTT;Maluku Utara;Nusa Tenggara Timur;903
+KALTENG;KALBAR;Maluku Utara;Kalimantan Barat;NA
+KALTENG;KALTENG;Maluku Utara;Kalimantan Tengah;25
+KALTENG;KALSEL;Maluku Utara;Kalimantan Selatan;70
+KALTENG;KALTIM;Maluku Utara;Kalimantan Timur;112
+KALTENG;KALUT;Maluku Utara;Kalimantan Utara;NA
+KALTENG;SULUT;Maluku Utara;Sulawesi Utara;7957
+KALTENG;SULTENG;Maluku Utara;Sulawesi Tengah;1726
+KALTENG;SULSEL;Maluku Utara;Sulawesi Selatan;6876
+KALTENG;SULTENGG;Maluku Utara;Sulawesi Tenggara;10617
+KALTENG;GORONTALO;Maluku Utara;Gorontalo;1063
+KALTENG;SULBARAT;Maluku Utara;Sulawesi Barat;366
+KALTENG;MALUKU;Maluku Utara;Maluku;8002
+KALTENG;MALUT;Maluku Utara;Maluku Utara;535338
+KALTENG;PAPBAR;Maluku Utara;Papua Barat;812
+KALTENG;PAPUA;Maluku Utara;Papua;760
+KALSEL;ACEH;Nusa Tenggara Barat;Aceh;239
+KALSEL;SUMUT;Nusa Tenggara Barat;Sumatera Utara;1310
+KALSEL;SUMBAR;Nusa Tenggara Barat;Sumatera Barat;342
+KALSEL;RIAU;Nusa Tenggara Barat;Riau;37
+KALSEL;JAMBI;Nusa Tenggara Barat;Jambi;NA
+KALSEL;SUMSEL;Nusa Tenggara Barat;Sumatera Selatan;355
+KALSEL;BENGKULU;Nusa Tenggara Barat;Bengkulu;NA
+KALSEL;LAMPUNG;Nusa Tenggara Barat;Lampung;64
+KALSEL;BABEL;Nusa Tenggara Barat;Kep  Bangka Belitung;103
+KALSEL;KEPRI;Nusa Tenggara Barat;Kepulauan Riau;515
+KALSEL;JAKARTA;Nusa Tenggara Barat;DKI Jakarta;1189
+KALSEL;JABAR;Nusa Tenggara Barat;Jawa Barat;3511
+KALSEL;JATENG;Nusa Tenggara Barat;Jawa Tengah;6594
+KALSEL;YOGYA;Nusa Tenggara Barat;DI Yogyakarta;1301
+KALSEL;JATIM;Nusa Tenggara Barat;Jawa Timur;14376
+KALSEL;BANTEN;Nusa Tenggara Barat;Banten;407
+KALSEL;BALI;Nusa Tenggara Barat;Bali;11587
+KALSEL;NTB;Nusa Tenggara Barat;Nusa Tenggara Barat;2283577
+KALSEL;NTT;Nusa Tenggara Barat;Nusa Tenggara Timur;6447
+KALSEL;KALBAR;Nusa Tenggara Barat;Kalimantan Barat;429
+KALSEL;KALTENG;Nusa Tenggara Barat;Kalimantan Tengah;189
+KALSEL;KALSEL;Nusa Tenggara Barat;Kalimantan Selatan;407
+KALSEL;KALTIM;Nusa Tenggara Barat;Kalimantan Timur;1472
+KALSEL;KALUT;Nusa Tenggara Barat;Kalimantan Utara;41
+KALSEL;SULUT;Nusa Tenggara Barat;Sulawesi Utara;103
+KALSEL;SULTENG;Nusa Tenggara Barat;Sulawesi Tengah;798
+KALSEL;SULSEL;Nusa Tenggara Barat;Sulawesi Selatan;3840
+KALSEL;SULTENGG;Nusa Tenggara Barat;Sulawesi Tenggara;27
+KALSEL;GORONTALO;Nusa Tenggara Barat;Gorontalo;118
+KALSEL;SULBARAT;Nusa Tenggara Barat;Sulawesi Barat;83
+KALSEL;MALUKU;Nusa Tenggara Barat;Maluku;NA
+KALSEL;MALUT;Nusa Tenggara Barat;Maluku Utara;223
+KALSEL;PAPBAR;Nusa Tenggara Barat;Papua Barat;198
+KALSEL;PAPUA;Nusa Tenggara Barat;Papua;115
+KALTIM;ACEH;Nusa Tenggara Timur;Aceh;82
+KALTIM;SUMUT;Nusa Tenggara Timur;Sumatera Utara;577
+KALTIM;SUMBAR;Nusa Tenggara Timur;Sumatera Barat;1297
+KALTIM;RIAU;Nusa Tenggara Timur;Riau;75
+KALTIM;JAMBI;Nusa Tenggara Timur;Jambi;112
+KALTIM;SUMSEL;Nusa Tenggara Timur;Sumatera Selatan;201
+KALTIM;BENGKULU;Nusa Tenggara Timur;Bengkulu;200
+KALTIM;LAMPUNG;Nusa Tenggara Timur;Lampung;68
+KALTIM;BABEL;Nusa Tenggara Timur;Kep  Bangka Belitung;NA
+KALTIM;KEPRI;Nusa Tenggara Timur;Kepulauan Riau;1048
+KALTIM;JAKARTA;Nusa Tenggara Timur;DKI Jakarta;823
+KALTIM;JABAR;Nusa Tenggara Timur;Jawa Barat;1038
+KALTIM;JATENG;Nusa Tenggara Timur;Jawa Tengah;5172
+KALTIM;YOGYA;Nusa Tenggara Timur;DI Yogyakarta;844
+KALTIM;JATIM;Nusa Tenggara Timur;Jawa Timur;12910
+KALTIM;BANTEN;Nusa Tenggara Timur;Banten;183
+KALTIM;BALI;Nusa Tenggara Timur;Bali;3718
+KALTIM;NTB;Nusa Tenggara Timur;Nusa Tenggara Barat;3858
+KALTIM;NTT;Nusa Tenggara Timur;Nusa Tenggara Timur;2448950
+KALTIM;KALBAR;Nusa Tenggara Timur;Kalimantan Barat;322
+KALTIM;KALTENG;Nusa Tenggara Timur;Kalimantan Tengah;27
+KALTIM;KALSEL;Nusa Tenggara Timur;Kalimantan Selatan;NA
+KALTIM;KALTIM;Nusa Tenggara Timur;Kalimantan Timur;556
+KALTIM;KALUT;Nusa Tenggara Timur;Kalimantan Utara;259
+KALTIM;SULUT;Nusa Tenggara Timur;Sulawesi Utara;495
+KALTIM;SULTENG;Nusa Tenggara Timur;Sulawesi Tengah;56
+KALTIM;SULSEL;Nusa Tenggara Timur;Sulawesi Selatan;8652
+KALTIM;SULTENGG;Nusa Tenggara Timur;Sulawesi Tenggara;1150
+KALTIM;GORONTALO;Nusa Tenggara Timur;Gorontalo;NA
+KALTIM;SULBARAT;Nusa Tenggara Timur;Sulawesi Barat;148
+KALTIM;MALUKU;Nusa Tenggara Timur;Maluku;2336
+KALTIM;MALUT;Nusa Tenggara Timur;Maluku Utara;91
+KALTIM;PAPBAR;Nusa Tenggara Timur;Papua Barat;346
+KALTIM;PAPUA;Nusa Tenggara Timur;Papua;781
+KALUT;ACEH;Papua;Aceh;540
+KALUT;SUMUT;Papua;Sumatera Utara;6136
+KALUT;SUMBAR;Papua;Sumatera Barat;1192
+KALUT;RIAU;Papua;Riau;446
+KALUT;JAMBI;Papua;Jambi;NA
+KALUT;SUMSEL;Papua;Sumatera Selatan;363
+KALUT;BENGKULU;Papua;Bengkulu;18
+KALUT;LAMPUNG;Papua;Lampung;2427
+KALUT;BABEL;Papua;Kep  Bangka Belitung;119
+KALUT;KEPRI;Papua;Kepulauan Riau;277
+KALUT;JAKARTA;Papua;DKI Jakarta;3133
+KALUT;JABAR;Papua;Jawa Barat;9083
+KALUT;JATENG;Papua;Jawa Tengah;36554
+KALUT;YOGYA;Papua;DI Yogyakarta;2685
+KALUT;JATIM;Papua;Jawa Timur;53364
+KALUT;BANTEN;Papua;Banten;979
+KALUT;BALI;Papua;Bali;1002
+KALUT;NTB;Papua;Nusa Tenggara Barat;3419
+KALUT;NTT;Papua;Nusa Tenggara Timur;10881
+KALUT;KALBAR;Papua;Kalimantan Barat;441
+KALUT;KALTENG;Papua;Kalimantan Tengah;455
+KALUT;KALSEL;Papua;Kalimantan Selatan;138
+KALUT;KALTIM;Papua;Kalimantan Timur;736
+KALUT;KALUT;Papua;Kalimantan Utara;190
+KALUT;SULUT;Papua;Sulawesi Utara;9192
+KALUT;SULTENG;Papua;Sulawesi Tengah;1477
+KALUT;SULSEL;Papua;Sulawesi Selatan;76699
+KALUT;SULTENGG;Papua;Sulawesi Tenggara;9147
+KALUT;GORONTALO;Papua;Gorontalo;759
+KALUT;SULBARAT;Papua;Sulawesi Barat;811
+KALUT;MALUKU;Papua;Maluku;21648
+KALUT;MALUT;Papua;Maluku Utara;3324
+KALUT;PAPBAR;Papua;Papua Barat;13446
+KALUT;PAPUA;Papua;Papua;1386032
+SULUT;ACEH;Papua Barat;Aceh;198
+SULUT;SUMUT;Papua Barat;Sumatera Utara;2523
+SULUT;SUMBAR;Papua Barat;Sumatera Barat;378
+SULUT;RIAU;Papua Barat;Riau;262
+SULUT;JAMBI;Papua Barat;Jambi;NA
+SULUT;SUMSEL;Papua Barat;Sumatera Selatan;418
+SULUT;BENGKULU;Papua Barat;Bengkulu;74
+SULUT;LAMPUNG;Papua Barat;Lampung;637
+SULUT;BABEL;Papua Barat;Kep  Bangka Belitung;250
+SULUT;KEPRI;Papua Barat;Kepulauan Riau;91
+SULUT;JAKARTA;Papua Barat;DKI Jakarta;1233
+SULUT;JABAR;Papua Barat;Jawa Barat;3308
+SULUT;JATENG;Papua Barat;Jawa Tengah;19380
+SULUT;YOGYA;Papua Barat;DI Yogyakarta;2041
+SULUT;JATIM;Papua Barat;Jawa Timur;20250
+SULUT;BANTEN;Papua Barat;Banten;293
+SULUT;BALI;Papua Barat;Bali;235
+SULUT;NTB;Papua Barat;Nusa Tenggara Barat;1325
+SULUT;NTT;Papua Barat;Nusa Tenggara Timur;4793
+SULUT;KALBAR;Papua Barat;Kalimantan Barat;85
+SULUT;KALTENG;Papua Barat;Kalimantan Tengah;12
+SULUT;KALSEL;Papua Barat;Kalimantan Selatan;145
+SULUT;KALTIM;Papua Barat;Kalimantan Timur;242
+SULUT;KALUT;Papua Barat;Kalimantan Utara;86
+SULUT;SULUT;Papua Barat;Sulawesi Utara;5710
+SULUT;SULTENG;Papua Barat;Sulawesi Tengah;415
+SULUT;SULSEL;Papua Barat;Sulawesi Selatan;28056
+SULUT;SULTENGG;Papua Barat;Sulawesi Tenggara;10706
+SULUT;GORONTALO;Papua Barat;Gorontalo;519
+SULUT;SULBARAT;Papua Barat;Sulawesi Barat;1046
+SULUT;MALUKU;Papua Barat;Maluku;24657
+SULUT;MALUT;Papua Barat;Maluku Utara;4053
+SULUT;PAPBAR;Papua Barat;Papua Barat;309422
+SULUT;PAPUA;Papua Barat;Papua;14311
+SULTENG;ACEH;Riau;Aceh;16846
+SULTENG;SUMUT;Riau;Sumatera Utara;439294
+SULTENG;SUMBAR;Riau;Sumatera Barat;173003
+SULTENG;RIAU;Riau;Riau;2265447
+SULTENG;JAMBI;Riau;Jambi;14358
+SULTENG;SUMSEL;Riau;Sumatera Selatan;18672
+SULTENG;BENGKULU;Riau;Bengkulu;2597
+SULTENG;LAMPUNG;Riau;Lampung;21879
+SULTENG;BABEL;Riau;Kep  Bangka Belitung;713
+SULTENG;KEPRI;Riau;Kepulauan Riau;11156
+SULTENG;JAKARTA;Riau;DKI Jakarta;8429
+SULTENG;JABAR;Riau;Jawa Barat;32014
+SULTENG;JATENG;Riau;Jawa Tengah;116815
+SULTENG;YOGYA;Riau;DI Yogyakarta;14702
+SULTENG;JATIM;Riau;Jawa Timur;91074
+SULTENG;BANTEN;Riau;Banten;3525
+SULTENG;BALI;Riau;Bali;717
+SULTENG;NTB;Riau;Nusa Tenggara Barat;4054
+SULTENG;NTT;Riau;Nusa Tenggara Timur;839
+SULTENG;KALBAR;Riau;Kalimantan Barat;3129
+SULTENG;KALTENG;Riau;Kalimantan Tengah;219
+SULTENG;KALSEL;Riau;Kalimantan Selatan;819
+SULTENG;KALTIM;Riau;Kalimantan Timur;177
+SULTENG;KALUT;Riau;Kalimantan Utara;154
+SULTENG;SULUT;Riau;Sulawesi Utara;518
+SULTENG;SULTENG;Riau;Sulawesi Tengah;172
+SULTENG;SULSEL;Riau;Sulawesi Selatan;7917
+SULTENG;SULTENGG;Riau;Sulawesi Tenggara;699
+SULTENG;GORONTALO;Riau;Gorontalo;NA
+SULTENG;SULBARAT;Riau;Sulawesi Barat;NA
+SULTENG;MALUKU;Riau;Maluku;84
+SULTENG;MALUT;Riau;Maluku Utara;NA
+SULTENG;PAPBAR;Riau;Papua Barat;165
+SULTENG;PAPUA;Riau;Papua;310
+SULSEL;ACEH;Sulawesi Barat;Aceh;NA
+SULSEL;SUMUT;Sulawesi Barat;Sumatera Utara;77
+SULSEL;SUMBAR;Sulawesi Barat;Sumatera Barat;NA
+SULSEL;RIAU;Sulawesi Barat;Riau;NA
+SULSEL;JAMBI;Sulawesi Barat;Jambi;956
+SULSEL;SUMSEL;Sulawesi Barat;Sumatera Selatan;38
+SULSEL;BENGKULU;Sulawesi Barat;Bengkulu;NA
+SULSEL;LAMPUNG;Sulawesi Barat;Lampung;107
+SULSEL;BABEL;Sulawesi Barat;Kep  Bangka Belitung;NA
+SULSEL;KEPRI;Sulawesi Barat;Kepulauan Riau;NA
+SULSEL;JAKARTA;Sulawesi Barat;DKI Jakarta;389
+SULSEL;JABAR;Sulawesi Barat;Jawa Barat;946
+SULSEL;JATENG;Sulawesi Barat;Jawa Tengah;4518
+SULSEL;YOGYA;Sulawesi Barat;DI Yogyakarta;609
+SULSEL;JATIM;Sulawesi Barat;Jawa Timur;3359
+SULSEL;BANTEN;Sulawesi Barat;Banten;NA
+SULSEL;BALI;Sulawesi Barat;Bali;5453
+SULSEL;NTB;Sulawesi Barat;Nusa Tenggara Barat;1276
+SULSEL;NTT;Sulawesi Barat;Nusa Tenggara Timur;3209
+SULSEL;KALBAR;Sulawesi Barat;Kalimantan Barat;NA
+SULSEL;KALTENG;Sulawesi Barat;Kalimantan Tengah;NA
+SULSEL;KALSEL;Sulawesi Barat;Kalimantan Selatan;699
+SULSEL;KALTIM;Sulawesi Barat;Kalimantan Timur;1733
+SULSEL;KALUT;Sulawesi Barat;Kalimantan Utara;406
+SULSEL;SULUT;Sulawesi Barat;Sulawesi Utara;550
+SULSEL;SULTENG;Sulawesi Barat;Sulawesi Tengah;5475
+SULSEL;SULSEL;Sulawesi Barat;Sulawesi Selatan;57144
+SULSEL;SULTENGG;Sulawesi Barat;Sulawesi Tenggara;473
+SULSEL;GORONTALO;Sulawesi Barat;Gorontalo;526
+SULSEL;SULBARAT;Sulawesi Barat;Sulawesi Barat;552349
+SULSEL;MALUKU;Sulawesi Barat;Maluku;195
+SULSEL;MALUT;Sulawesi Barat;Maluku Utara;186
+SULSEL;PAPBAR;Sulawesi Barat;Papua Barat;NA
+SULSEL;PAPUA;Sulawesi Barat;Papua;8
+SULTENGG;ACEH;Sulawesi Selatan;Aceh;138
+SULTENGG;SUMUT;Sulawesi Selatan;Sumatera Utara;1983
+SULTENGG;SUMBAR;Sulawesi Selatan;Sumatera Barat;297
+SULTENGG;RIAU;Sulawesi Selatan;Riau;812
+SULTENGG;JAMBI;Sulawesi Selatan;Jambi;3124
+SULTENGG;SUMSEL;Sulawesi Selatan;Sumatera Selatan;1590
+SULTENGG;BENGKULU;Sulawesi Selatan;Bengkulu;NA
+SULTENGG;LAMPUNG;Sulawesi Selatan;Lampung;1311
+SULTENGG;BABEL;Sulawesi Selatan;Kep  Bangka Belitung;575
+SULTENGG;KEPRI;Sulawesi Selatan;Kepulauan Riau;449
+SULTENGG;JAKARTA;Sulawesi Selatan;DKI Jakarta;5750
+SULTENGG;JABAR;Sulawesi Selatan;Jawa Barat;8358
+SULTENGG;JATENG;Sulawesi Selatan;Jawa Tengah;18948
+SULTENGG;YOGYA;Sulawesi Selatan;DI Yogyakarta;3976
+SULTENGG;JATIM;Sulawesi Selatan;Jawa Timur;23547
+SULTENGG;BANTEN;Sulawesi Selatan;Banten;497
+SULTENGG;BALI;Sulawesi Selatan;Bali;5130
+SULTENGG;NTB;Sulawesi Selatan;Nusa Tenggara Barat;8401
+SULTENGG;NTT;Sulawesi Selatan;Nusa Tenggara Timur;18589
+SULTENGG;KALBAR;Sulawesi Selatan;Kalimantan Barat;280
+SULTENGG;KALTENG;Sulawesi Selatan;Kalimantan Tengah;26
+SULTENGG;KALSEL;Sulawesi Selatan;Kalimantan Selatan;1065
+SULTENGG;KALTIM;Sulawesi Selatan;Kalimantan Timur;7777
+SULTENGG;KALUT;Sulawesi Selatan;Kalimantan Utara;2051
+SULTENGG;SULUT;Sulawesi Selatan;Sulawesi Utara;3078
+SULTENGG;SULTENG;Sulawesi Selatan;Sulawesi Tengah;9189
+SULTENGG;SULSEL;Sulawesi Selatan;Sulawesi Selatan;3973304
+SULTENGG;SULTENGG;Sulawesi Selatan;Sulawesi Tenggara;13215
+SULTENGG;GORONTALO;Sulawesi Selatan;Gorontalo;1123
+SULTENGG;SULBARAT;Sulawesi Selatan;Sulawesi Barat;16667
+SULTENGG;MALUKU;Sulawesi Selatan;Maluku;4070
+SULTENGG;MALUT;Sulawesi Selatan;Maluku Utara;1879
+SULTENGG;PAPBAR;Sulawesi Selatan;Papua Barat;1378
+SULTENGG;PAPUA;Sulawesi Selatan;Papua;7087
+GORONTALO;ACEH;Sulawesi Tengah;Aceh;154
+GORONTALO;SUMUT;Sulawesi Tengah;Sumatera Utara;2242
+GORONTALO;SUMBAR;Sulawesi Tengah;Sumatera Barat;851
+GORONTALO;RIAU;Sulawesi Tengah;Riau;364
+GORONTALO;JAMBI;Sulawesi Tengah;Jambi;303
+GORONTALO;SUMSEL;Sulawesi Tengah;Sumatera Selatan;330
+GORONTALO;BENGKULU;Sulawesi Tengah;Bengkulu;22
+GORONTALO;LAMPUNG;Sulawesi Tengah;Lampung;544
+GORONTALO;BABEL;Sulawesi Tengah;Kep  Bangka Belitung;181
+GORONTALO;KEPRI;Sulawesi Tengah;Kepulauan Riau;5
+GORONTALO;JAKARTA;Sulawesi Tengah;DKI Jakarta;2660
+GORONTALO;JABAR;Sulawesi Tengah;Jawa Barat;5588
+GORONTALO;JATENG;Sulawesi Tengah;Jawa Tengah;14117
+GORONTALO;YOGYA;Sulawesi Tengah;DI Yogyakarta;1350
+GORONTALO;JATIM;Sulawesi Tengah;Jawa Timur;28670
+GORONTALO;BANTEN;Sulawesi Tengah;Banten;264
+GORONTALO;BALI;Sulawesi Tengah;Bali;34150
+GORONTALO;NTB;Sulawesi Tengah;Nusa Tenggara Barat;5404
+GORONTALO;NTT;Sulawesi Tengah;Nusa Tenggara Timur;1203
+GORONTALO;KALBAR;Sulawesi Tengah;Kalimantan Barat;268
+GORONTALO;KALTENG;Sulawesi Tengah;Kalimantan Tengah;177
+GORONTALO;KALSEL;Sulawesi Tengah;Kalimantan Selatan;493
+GORONTALO;KALTIM;Sulawesi Tengah;Kalimantan Timur;2323
+GORONTALO;KALUT;Sulawesi Tengah;Kalimantan Utara;618
+GORONTALO;SULUT;Sulawesi Tengah;Sulawesi Utara;12192
+GORONTALO;SULTENG;Sulawesi Tengah;Sulawesi Tengah;1223027
+GORONTALO;SULSEL;Sulawesi Tengah;Sulawesi Selatan;94285
+GORONTALO;SULTENGG;Sulawesi Tengah;Sulawesi Tenggara;7991
+GORONTALO;GORONTALO;Sulawesi Tengah;Gorontalo;14623
+GORONTALO;SULBARAT;Sulawesi Tengah;Sulawesi Barat;10229
+GORONTALO;MALUKU;Sulawesi Tengah;Maluku;584
+GORONTALO;MALUT;Sulawesi Tengah;Maluku Utara;898
+GORONTALO;PAPBAR;Sulawesi Tengah;Papua Barat;296
+GORONTALO;PAPUA;Sulawesi Tengah;Papua;391
+SULBARAT;ACEH;Sulawesi Tenggara;Aceh;5
+SULBARAT;SUMUT;Sulawesi Tenggara;Sumatera Utara;479
+SULBARAT;SUMBAR;Sulawesi Tenggara;Sumatera Barat;331
+SULBARAT;RIAU;Sulawesi Tenggara;Riau;613
+SULBARAT;JAMBI;Sulawesi Tenggara;Jambi;423
+SULBARAT;SUMSEL;Sulawesi Tenggara;Sumatera Selatan;203
+SULBARAT;BENGKULU;Sulawesi Tenggara;Bengkulu;NA
+SULBARAT;LAMPUNG;Sulawesi Tenggara;Lampung;272
+SULBARAT;BABEL;Sulawesi Tenggara;Kep  Bangka Belitung;496
+SULBARAT;KEPRI;Sulawesi Tenggara;Kepulauan Riau;775
+SULBARAT;JAKARTA;Sulawesi Tenggara;DKI Jakarta;1062
+SULBARAT;JABAR;Sulawesi Tenggara;Jawa Barat;11856
+SULBARAT;JATENG;Sulawesi Tenggara;Jawa Tengah;10287
+SULBARAT;YOGYA;Sulawesi Tenggara;DI Yogyakarta;2616
+SULBARAT;JATIM;Sulawesi Tenggara;Jawa Timur;15754
+SULBARAT;BANTEN;Sulawesi Tenggara;Banten;NA
+SULBARAT;BALI;Sulawesi Tenggara;Bali;13774
+SULBARAT;NTB;Sulawesi Tenggara;Nusa Tenggara Barat;2684
+SULBARAT;NTT;Sulawesi Tenggara;Nusa Tenggara Timur;1631
+SULBARAT;KALBAR;Sulawesi Tenggara;Kalimantan Barat;28
+SULBARAT;KALTENG;Sulawesi Tenggara;Kalimantan Tengah;NA
+SULBARAT;KALSEL;Sulawesi Tenggara;Kalimantan Selatan;279
+SULBARAT;KALTIM;Sulawesi Tenggara;Kalimantan Timur;1936
+SULBARAT;KALUT;Sulawesi Tenggara;Kalimantan Utara;232
+SULBARAT;SULUT;Sulawesi Tenggara;Sulawesi Utara;1398
+SULBARAT;SULTENG;Sulawesi Tenggara;Sulawesi Tengah;5364
+SULBARAT;SULSEL;Sulawesi Tenggara;Sulawesi Selatan;132348
+SULBARAT;SULTENGG;Sulawesi Tenggara;Sulawesi Tenggara;1021335
+SULBARAT;GORONTALO;Sulawesi Tenggara;Gorontalo;596
+SULBARAT;SULBARAT;Sulawesi Tenggara;Sulawesi Barat;5480
+SULBARAT;MALUKU;Sulawesi Tenggara;Maluku;13456
+SULBARAT;MALUT;Sulawesi Tenggara;Maluku Utara;2120
+SULBARAT;PAPBAR;Sulawesi Tenggara;Papua Barat;334
+SULBARAT;PAPUA;Sulawesi Tenggara;Papua;2208
+MALUKU;ACEH;Sulawesi Utara;Aceh;427
+MALUKU;SUMUT;Sulawesi Utara;Sumatera Utara;1109
+MALUKU;SUMBAR;Sulawesi Utara;Sumatera Barat;214
+MALUKU;RIAU;Sulawesi Utara;Riau;1011
+MALUKU;JAMBI;Sulawesi Utara;Jambi;NA
+MALUKU;SUMSEL;Sulawesi Utara;Sumatera Selatan;463
+MALUKU;BENGKULU;Sulawesi Utara;Bengkulu;45
+MALUKU;LAMPUNG;Sulawesi Utara;Lampung;NA
+MALUKU;BABEL;Sulawesi Utara;Kep  Bangka Belitung;58
+MALUKU;KEPRI;Sulawesi Utara;Kepulauan Riau;264
+MALUKU;JAKARTA;Sulawesi Utara;DKI Jakarta;5486
+MALUKU;JABAR;Sulawesi Utara;Jawa Barat;2728
+MALUKU;JATENG;Sulawesi Utara;Jawa Tengah;6473
+MALUKU;YOGYA;Sulawesi Utara;DI Yogyakarta;213
+MALUKU;JATIM;Sulawesi Utara;Jawa Timur;8500
+MALUKU;BANTEN;Sulawesi Utara;Banten;445
+MALUKU;BALI;Sulawesi Utara;Bali;1994
+MALUKU;NTB;Sulawesi Utara;Nusa Tenggara Barat;161
+MALUKU;NTT;Sulawesi Utara;Nusa Tenggara Timur;2646
+MALUKU;KALBAR;Sulawesi Utara;Kalimantan Barat;358
+MALUKU;KALTENG;Sulawesi Utara;Kalimantan Tengah;201
+MALUKU;KALSEL;Sulawesi Utara;Kalimantan Selatan;637
+MALUKU;KALTIM;Sulawesi Utara;Kalimantan Timur;2888
+MALUKU;KALUT;Sulawesi Utara;Kalimantan Utara;254
+MALUKU;SULUT;Sulawesi Utara;Sulawesi Utara;1130387
+MALUKU;SULTENG;Sulawesi Utara;Sulawesi Tengah;7843
+MALUKU;SULSEL;Sulawesi Utara;Sulawesi Selatan;11873
+MALUKU;SULTENGG;Sulawesi Utara;Sulawesi Tenggara;1211
+MALUKU;GORONTALO;Sulawesi Utara;Gorontalo;26231
+MALUKU;SULBARAT;Sulawesi Utara;Sulawesi Barat;279
+MALUKU;MALUKU;Sulawesi Utara;Maluku;3617
+MALUKU;MALUT;Sulawesi Utara;Maluku Utara;7599
+MALUKU;PAPBAR;Sulawesi Utara;Papua Barat;1445
+MALUKU;PAPUA;Sulawesi Utara;Papua;2857
+MALUT;ACEH;Sumatera Barat;Aceh;3104
+MALUT;SUMUT;Sumatera Barat;Sumatera Utara;41293
+MALUT;SUMBAR;Sumatera Barat;Sumatera Barat;2391990
+MALUT;RIAU;Sumatera Barat;Riau;24997
+MALUT;JAMBI;Sumatera Barat;Jambi;18529
+MALUT;SUMSEL;Sumatera Barat;Sumatera Selatan;6378
+MALUT;BENGKULU;Sumatera Barat;Bengkulu;3705
+MALUT;LAMPUNG;Sumatera Barat;Lampung;5945
+MALUT;BABEL;Sumatera Barat;Kep  Bangka Belitung;613
+MALUT;KEPRI;Sumatera Barat;Kepulauan Riau;3744
+MALUT;JAKARTA;Sumatera Barat;DKI Jakarta;12889
+MALUT;JABAR;Sumatera Barat;Jawa Barat;16606
+MALUT;JATENG;Sumatera Barat;Jawa Tengah;24870
+MALUT;YOGYA;Sumatera Barat;DI Yogyakarta;3908
+MALUT;JATIM;Sumatera Barat;Jawa Timur;12156
+MALUT;BANTEN;Sumatera Barat;Banten;3117
+MALUT;BALI;Sumatera Barat;Bali;281
+MALUT;NTB;Sumatera Barat;Nusa Tenggara Barat;359
+MALUT;NTT;Sumatera Barat;Nusa Tenggara Timur;176
+MALUT;KALBAR;Sumatera Barat;Kalimantan Barat;188
+MALUT;KALTENG;Sumatera Barat;Kalimantan Tengah;174
+MALUT;KALSEL;Sumatera Barat;Kalimantan Selatan;4
+MALUT;KALTIM;Sumatera Barat;Kalimantan Timur;884
+MALUT;KALUT;Sumatera Barat;Kalimantan Utara;NA
+MALUT;SULUT;Sumatera Barat;Sulawesi Utara;429
+MALUT;SULTENG;Sumatera Barat;Sulawesi Tengah;100
+MALUT;SULSEL;Sumatera Barat;Sulawesi Selatan;854
+MALUT;SULTENGG;Sumatera Barat;Sulawesi Tenggara;49
+MALUT;GORONTALO;Sumatera Barat;Gorontalo;10
+MALUT;SULBARAT;Sumatera Barat;Sulawesi Barat;NA
+MALUT;MALUKU;Sumatera Barat;Maluku;238
+MALUT;MALUT;Sumatera Barat;Maluku Utara;NA
+MALUT;PAPBAR;Sumatera Barat;Papua Barat;NA
+MALUT;PAPUA;Sumatera Barat;Papua;374
+PAPBAR;ACEH;Sumatera Selatan;Aceh;3207
+PAPBAR;SUMUT;Sumatera Selatan;Sumatera Utara;15985
+PAPBAR;SUMBAR;Sumatera Selatan;Sumatera Barat;12983
+PAPBAR;RIAU;Sumatera Selatan;Riau;2312
+PAPBAR;JAMBI;Sumatera Selatan;Jambi;11913
+PAPBAR;SUMSEL;Sumatera Selatan;Sumatera Selatan;3577455
+PAPBAR;BENGKULU;Sumatera Selatan;Bengkulu;11631
+PAPBAR;LAMPUNG;Sumatera Selatan;Lampung;70801
+PAPBAR;BABEL;Sumatera Selatan;Kep  Bangka Belitung;2534
+PAPBAR;KEPRI;Sumatera Selatan;Kepulauan Riau;1726
+PAPBAR;JAKARTA;Sumatera Selatan;DKI Jakarta;6929
+PAPBAR;JABAR;Sumatera Selatan;Jawa Barat;41368
+PAPBAR;JATENG;Sumatera Selatan;Jawa Tengah;160325
+PAPBAR;YOGYA;Sumatera Selatan;DI Yogyakarta;27634
+PAPBAR;JATIM;Sumatera Selatan;Jawa Timur;111437
+PAPBAR;BANTEN;Sumatera Selatan;Banten;14564
+PAPBAR;BALI;Sumatera Selatan;Bali;5320
+PAPBAR;NTB;Sumatera Selatan;Nusa Tenggara Barat;169
+PAPBAR;NTT;Sumatera Selatan;Nusa Tenggara Timur;1053
+PAPBAR;KALBAR;Sumatera Selatan;Kalimantan Barat;619
+PAPBAR;KALTENG;Sumatera Selatan;Kalimantan Tengah;348
+PAPBAR;KALSEL;Sumatera Selatan;Kalimantan Selatan;NA
+PAPBAR;KALTIM;Sumatera Selatan;Kalimantan Timur;646
+PAPBAR;KALUT;Sumatera Selatan;Kalimantan Utara;NA
+PAPBAR;SULUT;Sumatera Selatan;Sulawesi Utara;539
+PAPBAR;SULTENG;Sumatera Selatan;Sulawesi Tengah;NA
+PAPBAR;SULSEL;Sumatera Selatan;Sulawesi Selatan;4529
+PAPBAR;SULTENGG;Sumatera Selatan;Sulawesi Tenggara;131
+PAPBAR;GORONTALO;Sumatera Selatan;Gorontalo;140
+PAPBAR;SULBARAT;Sumatera Selatan;Sulawesi Barat;NA
+PAPBAR;MALUKU;Sumatera Selatan;Maluku;428
+PAPBAR;MALUT;Sumatera Selatan;Maluku Utara;NA
+PAPBAR;PAPBAR;Sumatera Selatan;Papua Barat;NA
+PAPBAR;PAPUA;Sumatera Selatan;Papua;NA
+PAPUA;ACEH;Sumatera Utara;Aceh;50902
+PAPUA;SUMUT;Sumatera Utara;Sumatera Utara;6687178
+PAPUA;SUMBAR;Sumatera Utara;Sumatera Barat;37364
+PAPUA;RIAU;Sumatera Utara;Riau;25533
+PAPUA;JAMBI;Sumatera Utara;Jambi;3565
+PAPUA;SUMSEL;Sumatera Utara;Sumatera Selatan;4078
+PAPUA;BENGKULU;Sumatera Utara;Bengkulu;885
+PAPUA;LAMPUNG;Sumatera Utara;Lampung;3445
+PAPUA;BABEL;Sumatera Utara;Kep  Bangka Belitung;322
+PAPUA;KEPRI;Sumatera Utara;Kepulauan Riau;4350
+PAPUA;JAKARTA;Sumatera Utara;DKI Jakarta;17698
+PAPUA;JABAR;Sumatera Utara;Jawa Barat;18771
+PAPUA;JATENG;Sumatera Utara;Jawa Tengah;55164
+PAPUA;YOGYA;Sumatera Utara;DI Yogyakarta;3854
+PAPUA;JATIM;Sumatera Utara;Jawa Timur;21213
+PAPUA;BANTEN;Sumatera Utara;Banten;2853
+PAPUA;BALI;Sumatera Utara;Bali;920
+PAPUA;NTB;Sumatera Utara;Nusa Tenggara Barat;822
+PAPUA;NTT;Sumatera Utara;Nusa Tenggara Timur;1717
+PAPUA;KALBAR;Sumatera Utara;Kalimantan Barat;522
+PAPUA;KALTENG;Sumatera Utara;Kalimantan Tengah;33
+PAPUA;KALSEL;Sumatera Utara;Kalimantan Selatan;833
+PAPUA;KALTIM;Sumatera Utara;Kalimantan Timur;1052
+PAPUA;KALUT;Sumatera Utara;Kalimantan Utara;NA
+PAPUA;SULUT;Sumatera Utara;Sulawesi Utara;1052
+PAPUA;SULTENG;Sumatera Utara;Sulawesi Tengah;32
+PAPUA;SULSEL;Sumatera Utara;Sulawesi Selatan;372
+PAPUA;SULTENGG;Sumatera Utara;Sulawesi Tenggara;499
+PAPUA;GORONTALO;Sumatera Utara;Gorontalo;NA
+PAPUA;SULBARAT;Sumatera Utara;Sulawesi Barat;NA
+PAPUA;MALUKU;Sumatera Utara;Maluku;97
+PAPUA;MALUT;Sumatera Utara;Maluku Utara;186
+PAPUA;PAPBAR;Sumatera Utara;Papua Barat;NA
+PAPUA;PAPUA;Sumatera Utara;Papua;495

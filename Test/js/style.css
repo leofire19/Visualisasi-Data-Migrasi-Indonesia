@@ -1,0 +1,349 @@
+.btn{
+  margin: 5px 5px 5px 5px;
+}
+.btn-clicked
+{
+  border: 1px solid #f8ab65;
+  color: #fff;
+  background-color: #f8ab65;
+}
+#btn-group1 {
+    padding-bottom: 20px;
+}
+.tooltip {
+        position: absolute;
+        text-align: center;
+        width: 60px;
+        height: 15px;
+        padding: 1px;
+        font: 12px sans-serif;
+        background: #FFFFFF;
+        border: 0px;
+        border-radius: 8px;
+        pointer-events: none;
+    }
+
+.cntrClicked {
+      fill: rgba(85, 85, 85, 0.76); // Farbe des Landes falls selected
+    }
+
+#map-description .p {
+    padding: 0px;
+    margin: 0 0 25px;
+}
+
+/* Setting for Graph-Scroll */
+#containerST{
+  position: relative;
+}
+
+#sections{
+  width: 375px;
+}
+
+#sections > div{
+  background: white;
+  opacity: .2;
+  margin-bottom: 200px;
+}
+#sections > div:last-child{
+  margin-bottom: 30px;
+}
+#sections > div.graph-scroll-active{
+  opacity: 1;
+}
+
+#graph{
+  width: 375px;
+  position: absolute;
+  top: 0px;
+  margin-left: 375px;
+}
+
+.graph-scroll-fixed #graph{
+  position: fixed;
+  top: 0px;
+}
+
+.graph-scroll-below #graph{
+  bottom: 0px;
+  top: auto;
+}
+
+  @media (max-width: 750px)  {
+  #graph{
+    width: 100%;
+    transform: translate(-50%, 0);
+    margin-left: 50%;
+    width:320px;
+  }
+
+  #sections{
+    position: relative;
+    margin: 0px auto;
+    padding-top: 400px;
+    width:320px;
+  }
+
+  #sections div{
+    background: rgba(255,255,255,.9);
+    padding: 10px;
+    border: 1px solid;
+    max-width: 400px;
+    margin-bottom: 5  00px;
+  }
+}
+
+
+/* -------- Intro classes for countries --------*/
+
+.intro-eritrea {
+    display:table;
+    width: 100%;
+    padding:100px 0;
+    text-align:center;
+    color:#fff;background:url(../img/eritrea.jpg) center center no-repeat #000;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
+    -o-background-size:cover
+}
+
+.intro-ethiopia {
+    display:table;
+    width: 100%;
+    padding:100px 0;
+    text-align:center;
+    color:#fff;background:url(../img/Ethiopia.jpg) center center no-repeat #000;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
+    -o-background-size:cover
+}
+
+.intro-kyd {
+    display:table;
+    width: 100%;
+    padding:100px 0;
+    text-align:center;
+    color:#fff;background:url(../img/Kenya.jpg) center center no-repeat #000;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
+    -o-background-size:cover
+}
+
+.intro-somalia {
+    display:table;
+    width: 100%;
+    height: auto;
+    padding:100px 0;
+    text-align:center;
+    color:#fff;background:url(../img/Somalia.jpg) center center no-repeat #000;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
+    -o-background-size:cover
+}
+
+.intro-sudan {
+    display:table;
+    height: auto;
+    width: 100%;
+    padding:100px 0;
+    text-align:center;
+    color:#fff;background:url(../img/Sudan.jpg) center center no-repeat #000;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
+    -o-background-size:cover
+}
+
+.intro-worldmap {
+    display:table;
+    width: 100%;
+    padding:100px 0;
+    text-align:center;
+    color:#fff;background:url(../img/worldmap.jpg) center center no-repeat #000;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
+    -o-background-size:cover
+}
+
+/* --------------------------------------------------*/
+
+
+.modal-content {
+ font-size:10px;
+}
+
+/* Add Animation */
+	@-webkit-keyframes slideIn {
+	    from {bottom: -300px; opacity: 0}
+	    to {bottom: 0; opacity: 1}
+	}
+
+	@keyframes slideIn {
+	    from {bottom: -300px; opacity: 0}
+	    to {bottom: 0; opacity: 1}
+	}
+
+	@-webkit-keyframes fadeIn {
+	    from {opacity: 0}
+	    to {opacity: 1}
+	}
+
+	@keyframes fadeIn {
+	    from {opacity: 0}
+	    to {opacity: 1}
+	}
+
+
+.affix {
+      top: 40px;
+  }
+
+#text1  {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#disclaimer{
+  width: 800px;
+  float: left;
+	margin-bottom: 200px;
+}
+
+	/* disable mouseover on certain elements (Murray 2013: 183)*/
+	svg text {
+		pointer-events:none;
+	}
+
+	/* define bar colours in the CSS */
+	rect {
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+
+
+
+/* This concerns the team page - WIP ! */
+.team{
+    padding:75px 0;
+}
+h6.description{
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #999;
+	border-bottom: 1px solid rgba(0, 0, 0,0.1);
+	padding-bottom: 5px;
+}
+.profile{
+	margin-top: 25px;
+}
+.profile h1{
+	font-weight: normal;
+	font-size: 20px;
+	margin:10px 0 0 0;
+}
+.profile h2{
+	font-size: 14px;
+	font-weight: lighter;
+	margin-top: 5px;
+}
+.profile .img-box{
+	opacity: 1;
+	display: block;
+	position: relative;
+}
+.profile .img-box:after{
+	content:"";
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.75);
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+.img-box ul{
+	position: absolute;
+	z-index: 2;
+	bottom: 50px;
+	text-align: center;
+	width: 100%;
+	padding-left: 0px;
+	height: 0px;
+	margin:0px;
+	opacity: 0;
+}
+.profile .img-box:after, .img-box ul, .img-box ul li{
+	-webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+.img-box ul i{
+	font-size: 20px;
+	letter-spacing: 10px;
+}
+.img-box ul li{
+	color: #f8ab65;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #f8ab65;
+    margin: 2px;
+    padding: 5px;
+	display: inline-block;
+}
+.img-box a{
+	color:#fff;
+}
+.img-box:hover:after{
+	opacity: 1;
+}
+.img-box:hover ul{
+	opacity: 1;
+}
+.img-box ul a{
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+.img-box a:hover li{
+	border-color: #f8ab65;
+	color: #fff;
+    background-color: #f8ab65;
+}
+
+i.red{
+    color:#BC0213;
+}
+
+#footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.img-responsive {
+    margin: 0 auto;
+}
+
+.svg_worldmap {
+  width: 100%;
+}
+
+body {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .svg_worldmap {
+       width: 960px;
+       height: 500px;
+  }
+}
