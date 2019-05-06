@@ -188,6 +188,7 @@ var projection = d3.geoMercator()
   .scale(1000)
   .rotate([-120, 0])
 
+  
 // create path
 var path = d3.geoPath()
   .projection(projection)
@@ -213,54 +214,72 @@ var sliderScale = d3.scaleLinear()
   .interpolate(d3.interpolateRound);
 
 // load data, then draw map
-d3.queue().defer(d3.json,"data/peta/peta_prov_compressed.json")
-  .defer(d3.csv,"data/statistik")
+d3.queue().defer(d3.json,"data/peta/peta_indo_density.json")
+  .defer(d3.csv,"data/statistik/Arus Migrasi/inoutTotal.csv")
+  .defer(d3.csv,"data/statistik/Arus Migrasi/top5inTotal.csv")
+  .defer(d3.csv,"data/statistik/Arus Migrasi/top5outTotal.csv")
+  //.defer(d3.csv,"data/statistik/arusFemale.csv")
+  //.defer(d3.csv,"data/statistik/keppen.csv")
   .await(drawMap)
-
-function drawMap (error,data) {
-  var data_peta = topojson.feature(data, data.objects.INDO_PROV_2016).features
+  
+      
+function drawMap (error,peta,arus,top5in,top5out) {
+  var data_peta = topojson.feature(peta, peta.objects.peta_indo_density).features
   // attach data to existing variables
-  //pies = bubbles;
-  //lines = arrows;
-  gMap.selectAll("path")
+  //pies = bubbles;   
+  var color = d3.scaleThreshold()
+      .domain([0,50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200,12000,10000])
+      .range(d3.schemeBlues[9]);
+
+  // var color = d3.scale.threshold()
+  //     .domain([10, 12.5, 15, 17.5, 20, 22.5, 25])
+  //     .range(["#fff7bc", "#fee391", "#fec44f", "#fe9929", "#ec7014", "#cc4c02", "#993404", "#662506"]);
+  lines = arus;
+  dataMasuk = top5in;
+  dataKeluar = top5out;
+  gMap.selectAll(".country")
 		.data(data_peta)
 		.enter().append("path")
     .attr("id", function(d){return d.properties.IDPROV;})
     .attr("class", function(d){return d.properties.IDPROV + "_map";})
-    .attr("fill",cntrCol)
     .attr("d",path)
 		.attr("stroke", cntrStrokeCol)
     .attr("stroke-width",cntrStrokeWidth)
+    .attr("fill", function(d){
+      return color(d.properties.X2015);
+    })
     .on("mouseover", function(d) { // Animation für mouseover
       d3.select(this).transition()
         .ease(d3.easeLinear)
         .duration("50")
-        .attr("fill", cntrHoverCol);
+        .attr("stroke", "green")
+        .attr("stroke-width",1)
     })
     .on("mouseout", function(d) { //Animation für mousout
       d3.select(this).transition()
         .ease(d3.easeLinear)
         .duration("100")
-        .attr("fill", cntrCol);
+        .attr("stroke", cntrStrokeCol)
+        .attr("stroke-width",cntrStrokeWidth)
     })
     .on("click", function(){
-      provinsi = d3.select(this).attr('class').split('_')[1];
+      provinsi = d3.select(this).attr('class').split(' ')[1];
       drawAnimation(provinsi)
     })
   }
 
 // arrows
-function interContinental(provinsi, direction){
-  // filter data on direction
-  if (direction == "outflows"){
-    data = lines.filter(function(d){
-      if (d.or_region == provinsi & d.tot_compl >= lowerBound){
-        return d;
+function arusMigrasi(provinsi, arah){
+  
+  if (arah == "keluar"){
+    data = dataKeluar.filter(function(d){
+      if (d.id_lahir == provinsi){
+        return d;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
       }
     })
-  } else if (direction == "inflows"){
-    data = lines.filter(function(d){
-      if (d.as_region == provinsi &  d.tot_compl >= lowerBound){
+  } else if (arah == "masuk"){
+    data = dataMasuk.filter(function(d){
+      if (d.id_tinggal == provinsi){
         return d;
       }
     })
@@ -281,19 +300,19 @@ function interContinental(provinsi, direction){
     .attr("stroke", arrowCol)
     .attr("fill", "none")
     .merge(arcs).attr("d", function(d){
-      var tujuan = projection([d.as_long, d.as_lat]);
-      var awal = projection([d.or_long, d.or_lat]);
+      var tujuan = projection([d.long_tinggal, d.lat_tinggal]);
+      var awal = projection([d.long_lahir, d.lat_lahir]);
       return line([[awal[0], awal[1]], [(tujuan[0]+awal[0])/2+ Math.floor(Math.random() * 100) - 50, (tujuan[1]+awal[1])/2 + Math.floor(Math.random() * 100) - 50], [tujuan[0], tujuan[1]]]);
     })
     .attr("stroke-linejoin","round")
     .attr("stroke-width", function(d){
-      return refugeeScale(d.tot_compl);
+      return refugeeScale(d.Jumlah_Migrasi);
     })
     .on("mouseover", function(d) {
         tooltip.transition()
             .duration(200)
             .style("opacity", .9);
-        tooltip	.html(d3.format(',')(Math.floor(Math.round(d.tot_compl/100)*100)))
+        tooltip	.html(d3.format(',')(Math.floor(Math.round(d.Jumlah_Migrasi/100)*100)))
             .style("left", (d3.event.pageX) + "px")
             .style("top", (d3.event.pageY - 28) + "px");
         })
@@ -312,41 +331,24 @@ function interContinental(provinsi, direction){
     .on("start",function(d, i){
       var len = this.getTotalLength();
       var path = this;
-      drawArrowheads(d.tot_compl, len, t, path, i);
+      drawArrowheads(d.Jumlah_Migrasi, len, t, path, i);
     })
   // Exit
   arcs.exit().remove();
 }
 
 // Title-Bar
-function titleBar(region, direction) {
- 
-  if (direction == "outflows"){
-    sumRegion = [d3.sum(lines, function(d){
-      if (d.or_region == region) {
-        return d.tot_compl;
-      }
-    }) + d3.sum(pies, function(d){
-      if (d.or_region == region) {
-        return d.tot_compl;
-      }
-    })]
+function titleBar(provinsi, arah) {
+  if (arah == "keluar"){
+    sumProvinsi = lines.Keluar;
     titleBarTxt1.transition().text("refugees originated from this region.")
-  } else if (direction == "inflows"){
-    sumRegion = [d3.sum(lines, function(d){
-      if (d.as_region == region) {
-        return d.tot_compl;
-      }
-    }) + d3.sum(pies, function(d){
-      if (d.as_region == region) {
-        return d.tot_compl;
-      }
-    })]
+  } else if (arah == "masuk"){
+    sumProvinsi = lines.Masuk;
     titleBarTxt1.transition().text("individuals obtained refugee status in this region.")
   }
 
   var titleBarScale = d3.scaleLinear()
-    .domain([0,sumYear])
+    .domain([0,sumProvinsi])
     .range([0, 910]);
 
   titleBarBg = gTitleBar.selectAll(".titleBarBg");
@@ -361,16 +363,16 @@ function titleBar(region, direction) {
     .style("stroke", "#f8ab65")
     .style("stroke-width", 0.5)
 
-  titleBarTxtRegion.transition().text(region.replace(/([a-z])([A-Z])/g, '$1 $2') + " - " + year)
+  titleBarTxtRegion.transition().text(provinsi.replace(/([a-z])([A-Z])/g, '$1 $2') + " - " )
 
-  titleBarTxtNumber.transition(t).text(d3.format(',')(Math.floor(Math.round(sumRegion/100)*100)))
+  titleBarTxtNumber.transition(t).text(d3.format(',')(Math.floor(Math.round(sumProvinsi/100)*100)))
 
   //titleBarTxtPercent.transition().text(d3.format(".2")(100/Math.floor(sumYear)*Math.floor(sumRegion)) + "%")
 
   //titleBarTxt2.transition().text("of global refugee movements in selected year.")
 
-  titleBarChart = gTitleBar.selectAll(".titleBar").data(sumRegion)
-  titleBarChartBg = gTitleBar.selectAll(".titleBarChartBg").data(sumRegion)
+  titleBarChart = gTitleBar.selectAll(".titleBar").data(sumProvinsi)
+  titleBarChartBg = gTitleBar.selectAll(".titleBarChartBg").data(sumProvinsi)
 
   titleBarBg.enter().append("rect")
     .attr("width", 910)
@@ -388,110 +390,110 @@ function titleBar(region, direction) {
     .style("fill", "#f8ab65")
     .merge(titleBarChart)
       .transition()
-      .attr("width", titleBarScale(sumRegion))
+      .attr("width", titleBarScale(sumProvinsi))
 
 }
 
 
 // Pie Chart
-function pieChart(region,direction) {
+// function pieChart(provinsi,arah) {
 
-  var radius = 50;
+//   var radius = 50;
 
-  // filter data on direction
-  if (direction == "outflows"){
-    outerData = lines.filter(function(d){
-      if (d.or_region == region ) {
-        return d;
-      }
-    })
-    innerData = pies.filter(function(d){
-      if (d.or_region == region) {
-        return d;
-      }
-    })
-  } else if (direction == "inflows"){
-    outerData = lines.filter(function(d){
-      if (d.as_region == region) {
-        return d;
-      }
-    })
-    innerData = pies.filter(function(d){
-      if (d.as_region == region) {
-        return d;
-      }
-    })
-  }
+//   // filter data on direction
+//   if (direction == "outflows"){
+//     outerData = lines.filter(function(d){
+//       if (d.or_region == region ) {
+//         return d;
+//       }
+//     })
+//     innerData = pies.filter(function(d){
+//       if (d.or_region == region) {
+//         return d;
+//       }
+//     })
+//   } else if (direction == "inflows"){
+//     outerData = lines.filter(function(d){
+//       if (d.as_region == region) {
+//         return d;
+//       }
+//     })
+//     innerData = pies.filter(function(d){
+//       if (d.as_region == region) {
+//         return d;
+//       }
+//     })
+//   }
 
-  // summarize data
-  var outerSingle = d3.nest()
-    .rollup(function(d) {
-        return d3.sum(d, function(g) {return g.tot_compl; });
-     }).entries(outerData);
+//   // summarize data
+//   var outerSingle = d3.nest()
+//     .rollup(function(d) {
+//         return d3.sum(d, function(g) {return g.tot_compl; });
+//      }).entries(outerData);
 
- if (innerData[0]) {
-   var innerSingle = innerData[0]["tot_compl"]
- } else {
-   var innerSingle = 0;
- }
-
-
-  var pieData = [+outerSingle,+innerSingle]
-
-  // attach colors
-  var pieColor = d3.scaleOrdinal()
-   .range([pieExtCol,pieIntCol]);
-
-  var pie = d3.pie()
-  .value(function(d) { return d})
-  .sort(null);
-
-  var arc = d3.arc()
-    .outerRadius(radius - 10)
-     .innerRadius(0);
-
-  var labelArc = d3.arc()
-    .outerRadius(radius - 4)
-    .innerRadius(radius - 4);
-
-  gPie.selectAll("path").remove();
-
-  var piePath = gPie.selectAll("path")
-    .data(pie(pieData)).enter()
-     .append("path")
-
-  piePath.attr("d", arc)
-    .style("fill", function(d) { return pieColor(d.data);})
-
-  pieLabel1.transition()
-    .text("within region");
-
-  pieLabel2.transition()
-    .text("across regions");
+//  if (innerData[0]) {
+//    var innerSingle = innerData[0]["tot_compl"]
+//  } else {
+//    var innerSingle = 0;
+//  }
 
 
-  pieLabel3.transition()
-    .text(function(){
-      if (pieData[1] == 0){
-        return "0%";
-      } else {
-        return f(1 / (pieData[0]+pieData[1]) * pieData[1]);
-      }
-    });
+//   var pieData = [+outerSingle,+innerSingle]
 
-  pieLabel4.transition()
-    .text(function(){
-      if (pieData[0] == 0){
-        return "0%";
-      } else {
-        return f(1 / (pieData[0]+pieData[1]) * pieData[0]);
-      }
-    });
+//   // attach colors
+//   var pieColor = d3.scaleOrdinal()
+//    .range([pieExtCol,pieIntCol]);
 
-}
+//   var pie = d3.pie()
+//   .value(function(d) { return d})
+//   .sort(null);
+
+//   var arc = d3.arc()
+//     .outerRadius(radius - 10)
+//      .innerRadius(0);
+
+//   var labelArc = d3.arc()
+//     .outerRadius(radius - 4)
+//     .innerRadius(radius - 4);
+
+//   gPie.selectAll("path").remove();
+
+//   var piePath = gPie.selectAll("path")
+//     .data(pie(pieData)).enter()
+//      .append("path")
+
+//   piePath.attr("d", arc)
+//     .style("fill", function(d) { return pieColor(d.data);})
+
+//   pieLabel1.transition()
+//     .text("within region");
+
+//   pieLabel2.transition()
+//     .text("across regions");
+
+
+//   pieLabel3.transition()
+//     .text(function(){
+//       if (pieData[1] == 0){
+//         return "0%";
+//       } else {
+//         return f(1 / (pieData[0]+pieData[1]) * pieData[1]);
+//       }
+//     });
+
+//   pieLabel4.transition()
+//     .text(function(){
+//       if (pieData[0] == 0){
+//         return "0%";
+//       } else {
+//         return f(1 / (pieData[0]+pieData[1]) * pieData[0]);
+//       }
+//     });
+
+// }
 
 // draw arrowheads
-function drawArrowheads(tot_compl, len, t, path, i){
+function drawArrowheads(Jumlah_Migrasi, len, t, path, i){
 
   var arrowHeads = gArrows.selectAll(".arrowHead:nth-child(" + i + ")").data(data);
 
@@ -505,44 +507,43 @@ function drawArrowheads(tot_compl, len, t, path, i){
       .attrTween("transform",function(d){
         return function(t) {
           var pos = t * len;
-          return "translate(" + pointAtLength(pos, path) + ") rotate( " + angleAtLength(pos, path) + ") scale(" + linearScale(tot_compl) + ")";
+          return "translate(" + pointAtLength(pos, path) + ") rotate( " + angleAtLength(pos, path) + ") scale(" + linearScale(Jumlah_Migrasi) + ")";
         };
       })
 
 }
 
 // draw barchart
-function barChartTop5(year, region, direction){
+function barChartTop5(provinsi,arah){
 
-  if (direction == "inflows"){
-    d3.csv("assets/data/top5to_region.csv", type, render);
-    yColumn = "origin";
-    barchartCaption.transition(t).text("Top Origin Countries")
-  } else if (direction == "outflows"){
-    d3.csv("assets/data/top5from_region.csv", type, render);
-    yColumn = "asylum";
-    barchartCaption.transition(t).text("Top Asylum Countries")
+  if (arah == "masuk"){
+    d3.csv("data/statistik/Arus Migrasi/top5inTotal.csv", type, render);
+    yColumn = "Asal";
+    barchartCaption.transition(t).text("Daerah Tujuan")
+  } else if (arah == "keluar"){
+    d3.csv("data/statistik/Arus Migrasi/top5outTotal.csv", type, render);
+    yColumn = "Tujuan";
+    barchartCaption.transition(t).text("Daerah Asal")
   }
-
 
   function render(data){
 
     // filter data
-    if (direction == "inflows"){
+    if (arah == "masuk"){
       data = data.filter(function(d){
-        if (d.as_region == region & d.year == year){
+        if (d.kd_tinggal == provinsi){
           return d;
         }
       })
-    } else if (direction == "outflows"){
+    } else if (arah == "keluar"){
       data = data.filter(function(d){
-        if (d.or_region == region & d.year == year){
+        if (d.kd_lahir == provinsi){
           return d;
         }
       })
     }
 
-
+    
 
     // create scale
     xScale.domain([0, d3.max(data, function (d){ return Math.floor(Math.round(d[xColumn]/100)*100)})]);
@@ -565,7 +566,7 @@ function barChartTop5(year, region, direction){
       .attr("font-size", barFontSize)
       .merge(bars)
         .attr("fill", function(d){
-          if (d.as_region == d.or_region){
+          if (d.kd_tinggal == d.kd_lahir){
             return "rgb(208, 208, 208)";
           } else {
             return barColor;
@@ -595,7 +596,7 @@ function barChartTop5(year, region, direction){
           tooltip.transition()
               .duration(200)
               .style("opacity", .9);
-          tooltip.html(d3.format(',')(Math.floor(Math.round(d.tot_compl/100)*100)))
+          tooltip.html(d3.format(',')(Math.floor(Math.round(d.Jumlah_Migrasi/100)*100)))
               .style("left", (d3.event.pageX) + "px")
               .style("top", (d3.event.pageY - 28) + "px");
           })
@@ -618,27 +619,28 @@ function barChartTop5(year, region, direction){
   }
 
   function type(d){
-    d.tot_compl = +d.tot_compl;
+    d.Jumlah_Migrasi = +d.Jumlah_Migrasi;
     return d;
   }
 
 }
 
-function drawAnimation(region){
+function drawAnimation(provinsi){
 
   // get chosen mode
   if (d3.select('#to').classed("btn-clicked")){
-    var direction = "inflows";
+    var arah = "masuk";
   } else if(d3.select('#from').classed("btn-clicked")) {
-    var direction = "outflows";
+    var arah = "keluar";
   }
+  
   d3.selectAll(".country").classed("cntrClicked", false);
-  d3.selectAll("."+region).classed("cntrClicked", true);
+  d3.selectAll("."+provinsi).classed("cntrClicked", true);
 
-  interContinental(region,direction);
-  pieChart(region,direction)
-  barChartTop5(region, direction)
-  titleBar(region,  direction)
+  arusMigrasi(provinsi,arah);
+  //pieChart(provinsi,arah)
+  //barChartTop5(provinsi, arah)
+  //titleBar(provinsi, arah)
 
 
 }
@@ -648,7 +650,7 @@ d3.select('#to').on("click", function(){
   $('#from').removeClass("btn-clicked");
   $(this).addClass("btn-clicked");
   if (!d3.select(".cntrClicked").empty()){
-    drawAnimation(region);
+    drawAnimation(provinsi);
   }
 });
 
@@ -656,6 +658,6 @@ d3.select('#from').on("click", function(){
   $('#to').removeClass("btn-clicked");
   $(this).addClass("btn-clicked");
   if (!d3.select(".cntrClicked").empty()){
-    drawAnimation(region);
+    drawAnimation(provinsi);
   }
 });
