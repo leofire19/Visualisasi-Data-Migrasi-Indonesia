@@ -1,10 +1,10 @@
 // size of svg
 var width = 960,
-    height = 500;
+    height = 600,
+    centered;
 
 // define colors
 var cntrCol = "#d0d0d0",
-    cntrHoverCol = "#555555",
     cntrStrokeCol = "white",
     barColor = "rgba(248, 171, 101, 0.7)",
     sliderLineCol = "#d0d0d0",
@@ -36,11 +36,6 @@ var pieTextFontColor = "#555555",
     pieFontColor = "#555555",
     pieFontSize = "25px";
 
-
-// starting year
-var selectedYear = 1990,
-    region;
-
 // additional variables
 var cntrStrokeWidth = 0.3,
     lowerBound = 100;
@@ -49,10 +44,6 @@ var cntrStrokeWidth = 0.3,
 var barWidth = 210,
     barHeight = 120,
     barPadding = 0.2;
-
-// initialize variables for data
-var pies,
-    lines;
 
 // initialize tooltip
 var tooltip = d3.select("body").append("div")
@@ -88,29 +79,29 @@ var titleBarTxtRegion = gTitleBarTxt.append("text")
   .attr("font-size", "30px");
 
 var titleBarTxtNumber = gTitleBarTxt.append("text")
-  .attr("x", 450)
+  .attr("x", 350)
   .attr("y", 50)
   .attr("fill", barchartFontColor)
   .attr("font-family", barchartFont)
   .attr("font-size", "40px");
 
 var titleBarTxt1 = gTitleBarTxt.append("text")
-  .attr("x", 450)
-  .attr("y", 65)
+  .attr("x", 350)
+  .attr("y", 70)
   .attr("fill", barchartFontColor)
   .attr("font-family", barchartFont)
   .attr("font-size", "10px");
 
 var titleBarTxtPercent = gTitleBarTxt.append("text")
-  .attr("x", 700)
+  .attr("x", 600)
   .attr("y", 50)
   .attr("fill", barchartFontColor)
   .attr("font-family", barchartFont)
   .attr("font-size", "40px");
 
 var titleBarTxt2 = gTitleBarTxt.append("text")
-  .attr("x", 700)
-  .attr("y", 65)
+  .attr("x", 600)
+  .attr("y", 70)
   .attr("fill", barchartFontColor)
   .attr("font-family", barchartFont)
   .attr("font-size", "10px");
@@ -159,10 +150,6 @@ var pieLabel4 = svg.append("text")
   .attr("font-family", pieFont)
   .attr("font-size", pieFontSize);
 
-// initialize variables
-var xColumn = "tot_compl",
-    yColumn;
-
 //create scales
 var xScale = d3.scaleLinear()
 .range(      [0,barWidth]);
@@ -184,7 +171,7 @@ var p = Math.max(0, d3.precisionFixed(0.05) - 2),
 
 // define projection
 var projection = d3.geoMercator()
-  .translate([width / 2, height / 1.5]) // Zentrieren
+  .translate([width / 2, height / 2.25]) 
   .scale(1000)
   .rotate([-120, 0])
 
@@ -205,55 +192,57 @@ var linearScale = d3.scaleLog()
     .range([0.2,1]);
 
 var refugeeScale = d3.scaleLog()
-  .domain([lowerBound,320000])
+  .domain([1000,1593650])
   .range([0.2, 10])
 
-var sliderScale = d3.scaleLinear()
-  .domain([0,280])
-  .range([1990, 2013])
-  .interpolate(d3.interpolateRound);
-
 // load data, then draw map
-d3.queue().defer(d3.json,"data/peta/peta_indo_density.json")
-  .defer(d3.csv,"data/statistik/Arus Migrasi/inoutTotal.csv")
-  .defer(d3.csv,"data/statistik/Arus Migrasi/top5inTotal.csv")
-  .defer(d3.csv,"data/statistik/Arus Migrasi/top5outTotal.csv")
+d3.queue().defer(d3.json,"data/peta/peta_prov_dens.json")
+  .defer(d3.csv,"data/statistik/Arus Migrasi/DataTop5Migrasi.csv")
+  .defer(d3.csv,"data/statistik/Arus Migrasi/DataInOut.csv")
+  // .defer(d3.csv,"data/statistik/Arus Migrasi/top5outTotal.csv")
   //.defer(d3.csv,"data/statistik/arusFemale.csv")
   //.defer(d3.csv,"data/statistik/keppen.csv")
   .await(drawMap)
-  
-      
-function drawMap (error,peta,arus,top5in,top5out) {
-  var data_peta = topojson.feature(peta, peta.objects.peta_indo_density).features
-  // attach data to existing variables
-  //pies = bubbles;   
-  var color = d3.scaleThreshold()
+
+  var colorMap = d3.scaleThreshold()
       .domain([0,50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200,12000,10000])
       .range(d3.schemeBlues[9]);
-
+  var colorMapSelected = d3.scaleThreshold()
+      .domain([0,50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200,12000,10000])
+      .range(d3.schemeGreens[9]);   
+      
+function drawMap (error,peta,arus,total) {
+  var data_peta = topojson.feature(peta, peta.objects.peta_prov_dens).features
+  // attach data to existing variables
+  //pies = bubbles;   
   // var color = d3.scale.threshold()
   //     .domain([10, 12.5, 15, 17.5, 20, 22.5, 25])
   //     .range(["#fff7bc", "#fee391", "#fec44f", "#fe9929", "#ec7014", "#cc4c02", "#993404", "#662506"]);
   lines = arus;
-  dataMasuk = top5in;
-  dataKeluar = top5out;
-  gMap.selectAll(".country")
+  Total_migrasi = total;
+  gMap.selectAll(".provinsi")
 		.data(data_peta)
-		.enter().append("path")
-    .attr("id", function(d){return d.properties.IDPROV;})
-    .attr("class", function(d){return d.properties.IDPROV + "_map";})
-    .attr("d",path)
-		.attr("stroke", cntrStrokeCol)
+    .enter().append("path")
+    .attr("class", function(d){return d.properties.kode+" provinsi";})
+    .attr("id", function(d){return d.properties.kode;})
+    .attr("stroke", cntrStrokeCol)
     .attr("stroke-width",cntrStrokeWidth)
     .attr("fill", function(d){
-      return color(d.properties.X2015);
+      return colorMap(d.properties.X2015);
     })
+    .attr("d",path)
     .on("mouseover", function(d) { // Animation für mouseover
       d3.select(this).transition()
         .ease(d3.easeLinear)
         .duration("50")
         .attr("stroke", "green")
         .attr("stroke-width",1)
+      tooltip.transition()
+        .duration(50)
+        .style("opacity", .9);
+      tooltip.text(d.properties.PROVINSI)
+        .style("left", (d3.event.pageX) + "px")
+        .style("top", (d3.event.pageY - 28) + "px");
     })
     .on("mouseout", function(d) { //Animation für mousout
       d3.select(this).transition()
@@ -263,23 +252,30 @@ function drawMap (error,peta,arus,top5in,top5out) {
         .attr("stroke-width",cntrStrokeWidth)
     })
     .on("click", function(){
-      provinsi = d3.select(this).attr('class').split(' ')[1];
+        d3.selectAll('path').style('fill',null)
+        d3.select(this).style("fill",function(d){
+          return colorMapSelected(d.properties.X2015);})
+      provinsi = d3.select(this).attr('class').split(' ')[0];
       drawAnimation(provinsi)
     })
+    .on("dblclick",dblclicked_)
+  //   .call(d3.zoom().on("zoom", function () {
+  //     svg.attr("transform", d3.event.transform)
+  //  }))
   }
 
 // arrows
 function arusMigrasi(provinsi, arah){
-  
+  var jk="Gabungan";
   if (arah == "keluar"){
-    data = dataKeluar.filter(function(d){
-      if (d.id_lahir == provinsi){
+    data = lines.filter(function(d){
+      if (d.kode_lahir == provinsi & d.jenis_data==arah & d.jenis_jkdata==jk){
         return d;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
       }
     })
   } else if (arah == "masuk"){
-    data = dataMasuk.filter(function(d){
-      if (d.id_tinggal == provinsi){
+    data = lines.filter(function(d){
+      if (d.kode_tinggal == provinsi & d.jenis_data==arah& d.jenis_jkdata==jk){
         return d;
       }
     })
@@ -333,29 +329,72 @@ function arusMigrasi(provinsi, arah){
       var path = this;
       drawArrowheads(d.Jumlah_Migrasi, len, t, path, i);
     })
+    
   // Exit
   arcs.exit().remove();
 }
 
+
+
+// draw arrowheads
+function drawArrowheads(Jumlah_Migrasi, len, t, path, i){
+
+  var arrowHeads = gArrows.selectAll(".arrowHead:nth-child(" + i + ")").data(data);
+
+  // create arrowhead
+  arrowHeads.enter().append("path")
+    .attr("class", "arrowHead")
+    .attr("fill", arrowHeadCol)
+    .attr("d", "M-5,0 L-15,15 L15,0 L-15,-15 Z")
+    .merge(arrowHeads)
+    .transition(t).duration(1000)
+      .attrTween("transform",function(d){
+        return function(t) {
+          var pos = t * len;
+          return "translate(" + pointAtLength(pos, path) + ") rotate( " + angleAtLength(pos, path) + ") scale(" + linearScale(Jumlah_Migrasi) + ")";
+        };
+      })
+}
+
+
 // Title-Bar
 function titleBar(provinsi, arah) {
+  var jk ="Gabungan";
+  namaProvinsi = Total_migrasi.filter(function(d){
+    if (d.jenis_jkdata == jk & d.kode_prov==provinsi) {
+      return d.prov;
+    }
+  });
+  sumPendudukProv = Total_migrasi.filter(function(d){
+    if (d.jenis_jkdata == jk & d.kode_prov==provinsi) {
+      return d.X2015;
+    }
+  })[0].X2015;
   if (arah == "keluar"){
-    sumProvinsi = lines.Keluar;
-    titleBarTxt1.transition().text("refugees originated from this region.")
+    sumProvinsi = Total_migrasi.filter(function(d){
+      if (d.jenis_jkdata == jk & d.kode_prov==provinsi) {
+        return d.keluar;
+      }
+    })[0].keluar;
+    titleBarTxt1.transition().text("Penduduk "+jk+" \nmigrasi keluar seumur hidup")
   } else if (arah == "masuk"){
-    sumProvinsi = lines.Masuk;
-    titleBarTxt1.transition().text("individuals obtained refugee status in this region.")
+    sumProvinsi = Total_migrasi.filter(function(d){
+      if (d.jenis_jkdata == jk & d.kode_prov==provinsi) {
+        return d.masuk;
+      }
+    })[0].masuk;
+    titleBarTxt1.transition().text("Penduduk "+jk+" \nmigrasi masuk seumur hidup")
   }
 
   var titleBarScale = d3.scaleLinear()
-    .domain([0,sumProvinsi])
+    .domain([0,sumPendudukProv])
     .range([0, 910]);
 
-  titleBarBg = gTitleBar.selectAll(".titleBarBg");
+  titleBarBg = gTitleBar.selectAll(".titleBarBg").data(sumPendudukProv);
 
   titleBarBg.enter().append("rect")
-    .attr("width", 920)
-    .attr("height", 70)
+    .attr("width", 850)
+    .attr("height", 80)
     .attr("x", 20)
     .attr("y", 0)
     .attr("class", "titleBarBg")
@@ -363,19 +402,19 @@ function titleBar(provinsi, arah) {
     .style("stroke", "#f8ab65")
     .style("stroke-width", 0.5)
 
-  titleBarTxtRegion.transition().text(provinsi.replace(/([a-z])([A-Z])/g, '$1 $2') + " - " )
+  titleBarTxtRegion.transition().text(namaProvinsi[0].prov)
 
   titleBarTxtNumber.transition(t).text(d3.format(',')(Math.floor(Math.round(sumProvinsi/100)*100)))
 
-  //titleBarTxtPercent.transition().text(d3.format(".2")(100/Math.floor(sumYear)*Math.floor(sumRegion)) + "%")
+  titleBarTxtPercent.transition().text(d3.format(".2")(Math.floor(sumProvinsi)) + "%")
 
-  //titleBarTxt2.transition().text("of global refugee movements in selected year.")
+  titleBarTxt2.transition().text("of global refugee movements in selected year.")
 
   titleBarChart = gTitleBar.selectAll(".titleBar").data(sumProvinsi)
   titleBarChartBg = gTitleBar.selectAll(".titleBarChartBg").data(sumProvinsi)
 
   titleBarBg.enter().append("rect")
-    .attr("width", 910)
+    .attr("width", 840)
     .attr("height", 10)
     .attr("x", 25)
     .attr("y", 5)
@@ -396,157 +435,135 @@ function titleBar(provinsi, arah) {
 
 
 // Pie Chart
-// function pieChart(provinsi,arah) {
+function pieChart(provinsi,arah) {
 
-//   var radius = 50;
+  var radius = 50;
 
-//   // filter data on direction
-//   if (direction == "outflows"){
-//     outerData = lines.filter(function(d){
-//       if (d.or_region == region ) {
-//         return d;
-//       }
-//     })
-//     innerData = pies.filter(function(d){
-//       if (d.or_region == region) {
-//         return d;
-//       }
-//     })
-//   } else if (direction == "inflows"){
-//     outerData = lines.filter(function(d){
-//       if (d.as_region == region) {
-//         return d;
-//       }
-//     })
-//     innerData = pies.filter(function(d){
-//       if (d.as_region == region) {
-//         return d;
-//       }
-//     })
-//   }
+  // filter data on direction
+  if (direction == "outflows"){
+    outerData = lines.filter(function(d){
+      if (d.or_region == region ) {
+        return d;
+      }
+    })
+    innerData = pies.filter(function(d){
+      if (d.or_region == region) {
+        return d;
+      }
+    })
+  } else if (direction == "inflows"){
+    outerData = lines.filter(function(d){
+      if (d.as_region == region) {
+        return d;
+      }
+    })
+    innerData = pies.filter(function(d){
+      if (d.as_region == region) {
+        return d;
+      }
+    })
+  }
 
-//   // summarize data
-//   var outerSingle = d3.nest()
-//     .rollup(function(d) {
-//         return d3.sum(d, function(g) {return g.tot_compl; });
-//      }).entries(outerData);
+  // summarize data
+  var outerSingle = d3.nest()
+    .rollup(function(d) {
+        return d3.sum(d, function(g) {return g.tot_compl; });
+     }).entries(outerData);
 
-//  if (innerData[0]) {
-//    var innerSingle = innerData[0]["tot_compl"]
-//  } else {
-//    var innerSingle = 0;
-//  }
-
-
-//   var pieData = [+outerSingle,+innerSingle]
-
-//   // attach colors
-//   var pieColor = d3.scaleOrdinal()
-//    .range([pieExtCol,pieIntCol]);
-
-//   var pie = d3.pie()
-//   .value(function(d) { return d})
-//   .sort(null);
-
-//   var arc = d3.arc()
-//     .outerRadius(radius - 10)
-//      .innerRadius(0);
-
-//   var labelArc = d3.arc()
-//     .outerRadius(radius - 4)
-//     .innerRadius(radius - 4);
-
-//   gPie.selectAll("path").remove();
-
-//   var piePath = gPie.selectAll("path")
-//     .data(pie(pieData)).enter()
-//      .append("path")
-
-//   piePath.attr("d", arc)
-//     .style("fill", function(d) { return pieColor(d.data);})
-
-//   pieLabel1.transition()
-//     .text("within region");
-
-//   pieLabel2.transition()
-//     .text("across regions");
+ if (innerData[0]) {
+   var innerSingle = innerData[0]["tot_compl"]
+ } else {
+   var innerSingle = 0;
+ }
 
 
-//   pieLabel3.transition()
-//     .text(function(){
-//       if (pieData[1] == 0){
-//         return "0%";
-//       } else {
-//         return f(1 / (pieData[0]+pieData[1]) * pieData[1]);
-//       }
-//     });
+  var pieData = [+outerSingle,+innerSingle]
 
-//   pieLabel4.transition()
-//     .text(function(){
-//       if (pieData[0] == 0){
-//         return "0%";
-//       } else {
-//         return f(1 / (pieData[0]+pieData[1]) * pieData[0]);
-//       }
-//     });
+  // attach colors
+  var pieColor = d3.scaleOrdinal()
+   .range([pieExtCol,pieIntCol]);
 
-// }
+  var pie = d3.pie()
+  .value(function(d) { return d})
+  .sort(null);
 
-// draw arrowheads
-function drawArrowheads(Jumlah_Migrasi, len, t, path, i){
+  var arc = d3.arc()
+    .outerRadius(radius - 10)
+     .innerRadius(0);
 
-  var arrowHeads = gArrows.selectAll(".arrowHead:nth-child(" + i + ")").data(data);
+  var labelArc = d3.arc()
+    .outerRadius(radius - 4)
+    .innerRadius(radius - 4);
 
-  // create arrowhead
-  arrowHeads.enter().append("path")
-    .attr("class", "arrowHead")
-    .attr("fill", arrowHeadCol)
-    .attr("d", "M-5,0 L-15,15 L15,0 L-15,-15 Z")
-    .merge(arrowHeads)
-    .transition(t).duration(1000)
-      .attrTween("transform",function(d){
-        return function(t) {
-          var pos = t * len;
-          return "translate(" + pointAtLength(pos, path) + ") rotate( " + angleAtLength(pos, path) + ") scale(" + linearScale(Jumlah_Migrasi) + ")";
-        };
-      })
+  gPie.selectAll("path").remove();
+
+  var piePath = gPie.selectAll("path")
+    .data(pie(pieData)).enter()
+     .append("path")
+
+  piePath.attr("d", arc)
+    .style("fill", function(d) { return pieColor(d.data);})
+
+  pieLabel1.transition()
+    .text("within region");
+
+  pieLabel2.transition()
+    .text("across regions");
+
+
+  pieLabel3.transition()
+    .text(function(){
+      if (pieData[1] == 0){
+        return "0%";
+      } else {
+        return f(1 / (pieData[0]+pieData[1]) * pieData[1]);
+      }
+    });
+
+  pieLabel4.transition()
+    .text(function(){
+      if (pieData[0] == 0){
+        return "0%";
+      } else {
+        return f(1 / (pieData[0]+pieData[1]) * pieData[0]);
+      }
+    });
 
 }
 
 // draw barchart
 function barChartTop5(provinsi,arah){
-
-  if (arah == "masuk"){
-    d3.csv("data/statistik/Arus Migrasi/top5inTotal.csv", type, render);
-    yColumn = "Asal";
+  var jk="Gabungan";
+  if (arah == "keluar"){
+    data = lines.filter(function(d){
+      if (d.kode_lahir == provinsi & d.jenis_data==arah & d.jenis_jkdata==jk){
+        return d;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+      }
+    })
+    data_sort=data.sort(function(a, b) {
+      return d3.descending(a.Jumlah_Migrasi, b.Jumlah_Migrasi)
+    });
+    yColumn = "prov_tinggal";
+    tampilBarChart(data_sort,yColumn);
     barchartCaption.transition(t).text("Daerah Tujuan")
-  } else if (arah == "keluar"){
-    d3.csv("data/statistik/Arus Migrasi/top5outTotal.csv", type, render);
-    yColumn = "Tujuan";
+  } else if (arah == "masuk"){
+    data = lines.filter(function(d){
+      if (d.kode_tinggal == provinsi & d.jenis_data==arah& d.jenis_jkdata==jk){
+        return d;
+      }
+    })
+    data_sort=data.sort(function(a, b) {
+      return d3.descending(a.Jumlah_Migrasi, b.Jumlah_Migrasi)
+    });
+    yColumn = "prov_lahir";
+    tampilBarChart(data_sort,yColumn);
     barchartCaption.transition(t).text("Daerah Asal")
   }
+}
 
-  function render(data){
-
-    // filter data
-    if (arah == "masuk"){
-      data = data.filter(function(d){
-        if (d.kd_tinggal == provinsi){
-          return d;
-        }
-      })
-    } else if (arah == "keluar"){
-      data = data.filter(function(d){
-        if (d.kd_lahir == provinsi){
-          return d;
-        }
-      })
-    }
-
-    
-
-    // create scale
-    xScale.domain([0, d3.max(data, function (d){ return Math.floor(Math.round(d[xColumn]/100)*100)})]);
+function tampilBarChart(data,yColumn){ 
+    xScale.domain([0, d3.max(data, function (d){ 
+      return Math.floor(Math.round(d.Jumlah_Migrasi/100)*100)})]);
     // yScale.domain(data.map(function (d){
     //     return d[yColumn];
     //   })
@@ -556,8 +573,10 @@ function barChartTop5(provinsi,arah){
     xAxisG.transition().duration(300).call(xAxis);
     yAxisG.transition().duration(300).call(yAxis);
 
-    var bars = rectG.selectAll("rect").data(data);
-    var barTexts = yAxisG.selectAll("text").data(data)
+    var bars = rectG.selectAll("rect")
+                    .data(data);
+    var barTexts = yAxisG.selectAll("text").data(data);
+ 
     bars.enter()
     .append("rect")
       .attr("x", 0)
@@ -566,7 +585,7 @@ function barChartTop5(provinsi,arah){
       .attr("font-size", barFontSize)
       .merge(bars)
         .attr("fill", function(d){
-          if (d.kd_tinggal == d.kd_lahir){
+          if (d.kode_tinggal == d.kode_lahir){
             return "rgb(208, 208, 208)";
           } else {
             return barColor;
@@ -574,7 +593,8 @@ function barChartTop5(provinsi,arah){
         }).transition().delay(300)
           .attr("y",     function (d, i){
             return 4.6153 + i * (4.6153 + 18.46) })
-          .attr("width", function (d){ return xScale(Math.floor(Math.round(d[xColumn]/100)*100)); })
+          .attr("width", function (d){ 
+            return xScale(Math.floor(Math.round(d.Jumlah_Migrasi/100)*100)); })
           .attr("height", 18.46)
 
       barTexts.enter()
@@ -618,11 +638,18 @@ function barChartTop5(provinsi,arah){
 
   }
 
-  function type(d){
-    d.Jumlah_Migrasi = +d.Jumlah_Migrasi;
-    return d;
-  }
+// calculate path
+function pointAtLength(l, path) {
+  var xy = path.getPointAtLength(l);
+  return [xy.x, xy.y];
+}
 
+
+// calculate angle
+function angleAtLength(l, path) {
+  var a = pointAtLength(Math.max(l - 0.01,0), path),
+      b = pointAtLength(l + 0.01, path);
+  return Math.atan2(b[1] - a[1], b[0] - a[0]) * 180 / Math.PI;
 }
 
 function drawAnimation(provinsi){
@@ -634,15 +661,17 @@ function drawAnimation(provinsi){
     var arah = "keluar";
   }
   
-  d3.selectAll(".country").classed("cntrClicked", false);
+
+  d3.selectAll(".provinsi").classed("cntrClicked", false);
   d3.selectAll("."+provinsi).classed("cntrClicked", true);
+  //d3.selectAll("."+provinsi").classed("active", false);
 
   arusMigrasi(provinsi,arah);
   //pieChart(provinsi,arah)
-  //barChartTop5(provinsi, arah)
-  //titleBar(provinsi, arah)
-
-
+  barChartTop5(provinsi, arah)
+  titleBar(provinsi, arah)
+  
+  
 }
 
 
@@ -661,3 +690,33 @@ d3.select('#from').on("click", function(){
     drawAnimation(provinsi);
   }
 });
+
+
+    function dblclicked_(d) {
+      var x, y, k;
+    
+      if (d && centered !== d) {
+        var centroid = path.centroid(d);
+        x = centroid[0];
+        y = centroid[1];
+        k = 4;
+        centered = d;
+      } else {
+        x = width / 2;
+        y = height / 2;
+        k = 1;
+        centered = null;
+      }
+      gMap.selectAll(".provinsi")
+          .classed("active", centered && function(d) { return d === centered; });
+    
+      gMap.transition()
+          .duration(750)
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+          .style("stroke-width", 1.5 / k + "px");
+      d3.event.stopPropagation();
+    }
+    
+
+  
+

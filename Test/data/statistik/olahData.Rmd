@@ -1,0 +1,111 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+femaleTrans <- read.csv2("F:/Kuliah/Visdata/Project TA Kelompok/Tugas/Wussh_1/data/statistik/femaleTrans.csv")
+maleTrans <- read.csv2("F:/Kuliah/Visdata/Project TA Kelompok/Tugas/Wussh_1/data/statistik/maleTrans.csv")
+rasio_jk<-  read.csv("F:/Kuliah/Visdata/Project TA Kelompok/Tugas/Wussh_1/data/statistik/rasio_JenisKelamin.csv")
+library(tidyverse)
+totalTrans <- inner_join(femaleTrans,maleTrans,by=c("id_tinggal","id_lahir","prov_tinggal","prov_lahir")) %>% 
+  replace(is.na(.),0) %>% 
+  mutate(Jumlah.Migrasi=as.numeric(as.character(Jumlah.Migrasi.x))+as.numeric(as.character(Jumlah.Migrasi.y)))
+write.csv()
+
+kodeprov <- read.table(file="clipboard",sep = "\t",header = T)
+test <- femaleTrans %>% 
+  left_join(kodeprov,by=c("prov_tinggal"="Nama.Provinsi")) 
+
+top5_femaleTrans_from <- femaleTrans %>% 
+  group_by(id_lahir) %>% 
+  top_n(5,Jumlah.Migrasi)
+
+top5_femaleTrans_to <- femaleTrans %>% 
+  group_by(id_tinggal) %>% 
+  top_n(5,Jumlah.Migrasi)
+
+top5_maleTrans_from <- maleTrans %>% 
+  group_by(id_lahir) %>% 
+  top_n(5,Jumlah.Migrasi)
+
+top5_maleTrans_to <- maleTrans %>% 
+  group_by(id_tinggal) %>% 
+  top_n(5,Jumlah.Migrasi)
+
+top5_total_from <- maleTrans %>% 
+  group_by(id_tinggal) %>% 
+  top_n(5,Jumlah.Migrasi)
+```
+
+```{r}
+library(sf)
+library(tidyverse)
+peta <- st_read("C:/xampp/htdocs/Test/data/peta/peta_indo_density/peta_indo_density.shp")
+peta_ <- peta %>% 
+  mutate(kode=rep("P",nrow(peta))) %>% 
+  mutate(kode=paste(kode,IDPROV,sep = "")) %>% 
+  select(-Provinsi_1)
+st_write(peta_,"peta_prov_dens.shp")
+
+```
+
+```{r}
+top5inmale <- read.csv("D:/Project Kuliah/visdat/Test/data/statistik/Arus Migrasi/top5inMale.csv")
+top5inFemale <- read.csv("D:/Project Kuliah/visdat/Test/data/statistik/Arus Migrasi/top5inFemale.csv")
+top5inTotal <- read.csv("D:/Project Kuliah/visdat/Test/data/statistik/Arus Migrasi/top5inTotal.csv")
+top5outmale <- read.csv("D:/Project Kuliah/visdat/Test/data/statistik/Arus Migrasi/top5outMale.csv")
+top5outFemale <- read.csv("D:/Project Kuliah/visdat/Test/data/statistik/Arus Migrasi/top5outFemale.csv")
+top5outTotal <- read.csv("D:/Project Kuliah/visdat/Test/data/statistik/Arus Migrasi/top5outTotal.csv")
+
+DataTop5 <- top5inmale %>% 
+  mutate(kode=rep("P",nrow(top5inmale))) %>% 
+  mutate(kode_lahir=paste(kode,id_lahir,sep = ""),
+         kode_tinggal=paste(kode,id_tinggal,sep = ""),
+         jenis_data=rep("masuk",nrow(top5inmale)),
+         jenis_jkdata=rep("Male",nrow(top5inmale))) %>% 
+  select(-c("X","id_lahir","id_tinggal","kode")) %>% 
+  bind_rows(top5inFemale %>% 
+              mutate(kode=rep("P",nrow(top5inFemale))) %>% 
+              mutate(kode_lahir=paste(kode,id_lahir,sep = ""),
+                     kode_tinggal=paste(kode,id_tinggal,sep = ""),
+                     jenis_data=rep("masuk",nrow(top5inFemale)),
+                     jenis_jkdata=rep("Female",nrow(top5inFemale))) %>% 
+              select(-c("X","id_lahir","id_tinggal","kode"))
+  ) %>% 
+  bind_rows(top5inTotal %>% 
+              mutate(kode=rep("P",nrow(top5inTotal))) %>% 
+              mutate(kode_lahir=paste(kode,id_lahir,sep = ""),
+                     kode_tinggal=paste(kode,id_tinggal,sep = ""),
+                     jenis_data=rep("masuk",nrow(top5inTotal)),
+                     jenis_jkdata=rep("Gabungan",nrow(top5inTotal))) %>% 
+              select(-c("X","id_lahir","id_tinggal","kode"))
+  ) %>% 
+  bind_rows(top5outmale %>% 
+              mutate(kode=rep("P",nrow(top5outmale))) %>% 
+              mutate(kode_lahir=paste(kode,id_lahir,sep = ""),
+                     kode_tinggal=paste(kode,id_tinggal,sep = ""),
+                     jenis_data=rep("keluar",nrow(top5outmale)),
+                     jenis_jkdata=rep("Male",nrow(top5outmale))) %>% 
+              select(-c("X","id_lahir","id_tinggal","kode"))
+  ) %>% 
+  bind_rows(top5outFemale %>% 
+              mutate(kode=rep("P",nrow(top5outFemale))) %>% 
+              mutate(kode_lahir=paste(kode,id_lahir,sep = ""),
+                     kode_tinggal=paste(kode,id_tinggal,sep = ""),
+                     jenis_data=rep("keluar",nrow(top5outFemale)),
+                     jenis_jkdata=rep("Female",nrow(top5outFemale))) %>% 
+              select(-c("X","id_lahir","id_tinggal","kode"))
+  ) %>% 
+  bind_rows(top5outTotal %>% 
+              mutate(kode=rep("P",nrow(top5outTotal))) %>% 
+              mutate(kode_lahir=paste(kode,id_lahir,sep = ""),
+                     kode_tinggal=paste(kode,id_tinggal,sep = ""),
+                     jenis_data=rep("keluar",nrow(top5outTotal)),
+                     jenis_jkdata=rep("Gabungan",nrow(top5outTotal))) %>% 
+              select(-c("X","id_lahir","id_tinggal","kode"))
+  ) 
+head(DataTop5)
+
+```
+
