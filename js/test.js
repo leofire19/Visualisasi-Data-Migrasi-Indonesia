@@ -7,24 +7,19 @@ var width = 960,
 var cntrCol = "#d0d0d0",
     cntrStrokeCol = "white",
     barColor = "rgba(248, 171, 101, 0.7)",
-    sliderLineCol = "#d0d0d0",
-    sliderHandleCol = "#f8ab65",
     arrowCol = "#f8ab65",
     arrowHeadCol = "#f8ab65",
-    pieExtCol = "#f8ab65",
-    pieIntCol = "#555555",
+    pieExtCol = "#2196f3",
+    pieIntCol = "#ff4081",
     titlebarCol = "#f8ab65",
     titlebarBgCol = "#f2f2f2";
+
 
 
 // define fonts
 var barFont = "Droid Sans",
     barFontSize = "11px";
 
-var sliderFont = "Droid Sans",
-    sliderSize = 8,
-    sliderFontSize = "17px",
-    sliderFontColor= "#555555";
 
 var barchartFontColor = "#555555",
     barchartFont = "Droid Sans",
@@ -52,7 +47,7 @@ var tooltip = d3.select("body").append("div")
 
 
 // create svg
-var svg = d3.select("#worldmap")
+var svg = d3.select("#peta-indo")
   .append("svg")
   .attr("class", "svg_peta")
   .attr("viewBox", "0 0 " + width + " " + height )
@@ -171,11 +166,11 @@ var p = Math.max(0, d3.precisionFixed(0.05) - 2),
 
 // define projection
 var projection = d3.geoMercator()
-  .translate([width / 2, height / 2.25]) 
+  .translate([width / 2, height / 2.25])
   .scale(1000)
   .rotate([-120, 0])
 
-  
+
 // create path
 var path = d3.geoPath()
   .projection(projection)
@@ -199,25 +194,19 @@ var refugeeScale = d3.scaleLog()
 d3.queue().defer(d3.json,"data/peta/peta_prov_dens.json")
   .defer(d3.csv,"data/statistik/Arus Migrasi/DataTop5Migrasi.csv")
   .defer(d3.csv,"data/statistik/Arus Migrasi/DataInOut.csv")
-  // .defer(d3.csv,"data/statistik/Arus Migrasi/top5outTotal.csv")
-  //.defer(d3.csv,"data/statistik/arusFemale.csv")
-  //.defer(d3.csv,"data/statistik/keppen.csv")
   .await(drawMap)
 
   var colorMap = d3.scaleThreshold()
-      .domain([0,50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200,12000,10000])
-      .range(d3.schemeBlues[9]);
+      .domain([0,50,250,400])
+      .range(d3.schemeBlues[5]);
   var colorMapSelected = d3.scaleThreshold()
-      .domain([0,50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200,12000,10000])
-      .range(d3.schemeGreens[9]);   
-      
+      .domain([0,50,250,400])
+      .range(d3.schemeGreens[5]);
+
+
+
 function drawMap (error,peta,arus,total) {
   var data_peta = topojson.feature(peta, peta.objects.peta_prov_dens).features
-  // attach data to existing variables
-  //pies = bubbles;   
-  // var color = d3.scale.threshold()
-  //     .domain([10, 12.5, 15, 17.5, 20, 22.5, 25])
-  //     .range(["#fff7bc", "#fee391", "#fec44f", "#fe9929", "#ec7014", "#cc4c02", "#993404", "#662506"]);
   lines = arus;
   Total_migrasi = total;
   gMap.selectAll(".provinsi")
@@ -259,18 +248,56 @@ function drawMap (error,peta,arus,total) {
       drawAnimation(provinsi)
     })
     .on("dblclick",dblclicked_)
-  //   .call(d3.zoom().on("zoom", function () {
-  //     svg.attr("transform", d3.event.transform)
-  //  }))
+
+
+	var legend = gMap.append("g")
+		.attr("id", "legend");
+
+  var legendText = ["0-50", "51-250", "250-400", ">400"];
+  var legendTextCol=["#BFD6E6","#65A9D3","#4178A4","#034C97"];
+
+  var legenditem = legend.selectAll(".legenditem")
+  		.data(d3.range(4))
+  		.enter()
+  		.append("g")
+  		.attr("class", "legenditem")
+  		.attr("transform", function(d, i) { return "translate(" + i * 31 + ",0)"; });
+
+  legenditem.append("rect")
+		.attr("x", 675)
+		.attr("y", 450)
+		.attr("width", 30)
+		.attr("height", 6)
+		.attr("class", "rect")
+		.style("fill", function(d, i) { return legendTextCol[i]; });
+
+	legenditem.append("text")
+		.attr("x", 690)
+		.attr("y", 445)
+		.style("text-anchor", "middle")
+		.text(function(d, i) { return legendText[i]; })
+
+    .attr("font-size", 7);
+
+  var legendTitle = legend.append("text")
+      .attr("class", "caption")
+      .attr("x", 675)
+      .attr("y", 470)
+      .attr("fill", "#000")
+      .attr("font-weight", "bold")
+      .text("Tingkat Kepadatan Penduduk (Penduduk/km2)")
+      .attr("font-size", 7);
+
   }
 
+
+
 // arrows
-function arusMigrasi(provinsi, arah){
-  var jk="Gabungan";
+function arusMigrasi(provinsi, arah,jk){
   if (arah == "keluar"){
     data = lines.filter(function(d){
       if (d.kode_lahir == provinsi & d.jenis_data==arah & d.jenis_jkdata==jk){
-        return d;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+        return d;
       }
     })
   } else if (arah == "masuk"){
@@ -329,7 +356,7 @@ function arusMigrasi(provinsi, arah){
       var path = this;
       drawArrowheads(d.Jumlah_Migrasi, len, t, path, i);
     })
-    
+
   // Exit
   arcs.exit().remove();
 }
@@ -358,8 +385,8 @@ function drawArrowheads(Jumlah_Migrasi, len, t, path, i){
 
 
 // Title-Bar
-function titleBar(provinsi, arah) {
-  var jk ="Gabungan";
+function titleBar(provinsi, arah,jk) {
+
   namaProvinsi = Total_migrasi.filter(function(d){
     if (d.jenis_jkdata == jk & d.kode_prov==provinsi) {
       return d.prov;
@@ -393,7 +420,7 @@ function titleBar(provinsi, arah) {
   titleBarBg = gTitleBar.selectAll(".titleBarBg").data(sumPendudukProv);
 
   titleBarBg.enter().append("rect")
-    .attr("width", 850)
+    .attr("width", 920)
     .attr("height", 80)
     .attr("x", 20)
     .attr("y", 0)
@@ -406,15 +433,15 @@ function titleBar(provinsi, arah) {
 
   titleBarTxtNumber.transition(t).text(d3.format(',')(Math.floor(Math.round(sumProvinsi/100)*100)))
 
-  titleBarTxtPercent.transition().text(d3.format(".2")(Math.floor(sumProvinsi)) + "%")
+  titleBarTxtPercent.transition().text(d3.format(".2")((sumProvinsi/sumPendudukProv)) + "%")
 
-  titleBarTxt2.transition().text("of global refugee movements in selected year.")
+  titleBarTxt2.transition().text("dari total jumlah penduduk provinsi.")
 
   titleBarChart = gTitleBar.selectAll(".titleBar").data(sumProvinsi)
   titleBarChartBg = gTitleBar.selectAll(".titleBarChartBg").data(sumProvinsi)
 
   titleBarBg.enter().append("rect")
-    .attr("width", 840)
+    .attr("width", 910)
     .attr("height", 10)
     .attr("x", 25)
     .attr("y", 5)
@@ -422,6 +449,7 @@ function titleBar(provinsi, arah) {
     .style("fill", "#f4f4f4")
 
   titleBarChart.enter().append("rect")
+    .attr("width", 910)
     .attr("height", 10)
     .attr("x", 25)
     .attr("y", 5)
@@ -435,49 +463,38 @@ function titleBar(provinsi, arah) {
 
 
 // Pie Chart
-function pieChart(provinsi,arah) {
+function pieChart(provinsi,arah,jk) {
 
   var radius = 50;
 
   // filter data on direction
-  if (direction == "outflows"){
-    outerData = lines.filter(function(d){
-      if (d.or_region == region ) {
-        return d;
+  if (arah == "masuk"){
+    lakiLaki = Total_migrasi.filter(function(d){
+      if (d.kode_prov == provinsi & d.jenis_jkdata=="Male") {
+        return d.masuk;
       }
+    })[0].masuk;
+    perempuan = Total_migrasi.filter(function(d){
+      if (d.kode_prov == provinsi & d.jenis_jkdata=="Female") {
+        return d.masuk;
+      }[0].masuk;
     })
-    innerData = pies.filter(function(d){
-      if (d.or_region == region) {
-        return d;
+  } else if (arah == "keluar"){
+    lakiLaki = Total_migrasi.filter(function(d){
+      if (d.kode_prov == provinsi & d.jenis_jkdata=="Male") {
+        return d.keluar;
       }
-    })
-  } else if (direction == "inflows"){
-    outerData = lines.filter(function(d){
-      if (d.as_region == region) {
-        return d;
+    })[0].keluar;
+    perempuan = Total_migrasi.filter(function(d){
+      if (d.kode_prov == provinsi & d.jenis_jkdata=="Female") {
+        return d.keluar;
       }
-    })
-    innerData = pies.filter(function(d){
-      if (d.as_region == region) {
-        return d;
-      }
-    })
-  }
-
-  // summarize data
-  var outerSingle = d3.nest()
-    .rollup(function(d) {
-        return d3.sum(d, function(g) {return g.tot_compl; });
-     }).entries(outerData);
-
- if (innerData[0]) {
-   var innerSingle = innerData[0]["tot_compl"]
- } else {
-   var innerSingle = 0;
- }
+  })[0].keluar;
+}
 
 
-  var pieData = [+outerSingle,+innerSingle]
+
+  var pieData = [+lakiLaki,+perempuan]
 
   // attach colors
   var pieColor = d3.scaleOrdinal()
@@ -505,10 +522,10 @@ function pieChart(provinsi,arah) {
     .style("fill", function(d) { return pieColor(d.data);})
 
   pieLabel1.transition()
-    .text("within region");
+    .text("lakiLaki");
 
   pieLabel2.transition()
-    .text("across regions");
+    .text("Perempuan");
 
 
   pieLabel3.transition()
@@ -516,7 +533,7 @@ function pieChart(provinsi,arah) {
       if (pieData[1] == 0){
         return "0%";
       } else {
-        return f(1 / (pieData[0]+pieData[1]) * pieData[1]);
+        return f(1 / (pieData[0]+pieData[1]) * pieData[0]);
       }
     });
 
@@ -525,19 +542,19 @@ function pieChart(provinsi,arah) {
       if (pieData[0] == 0){
         return "0%";
       } else {
-        return f(1 / (pieData[0]+pieData[1]) * pieData[0]);
+        return f(1 / (pieData[0]+pieData[1]) * pieData[1]);
       }
     });
 
 }
 
 // draw barchart
-function barChartTop5(provinsi,arah){
+function barChartTop5(provinsi,arah,jk){
   var jk="Gabungan";
   if (arah == "keluar"){
     data = lines.filter(function(d){
       if (d.kode_lahir == provinsi & d.jenis_data==arah & d.jenis_jkdata==jk){
-        return d;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+        return d;
       }
     })
     data_sort=data.sort(function(a, b) {
@@ -561,8 +578,8 @@ function barChartTop5(provinsi,arah){
   }
 }
 
-function tampilBarChart(data,yColumn){ 
-    xScale.domain([0, d3.max(data, function (d){ 
+function tampilBarChart(data,yColumn){
+    xScale.domain([0, d3.max(data, function (d){
       return Math.floor(Math.round(d.Jumlah_Migrasi/100)*100)})]);
     // yScale.domain(data.map(function (d){
     //     return d[yColumn];
@@ -576,7 +593,7 @@ function tampilBarChart(data,yColumn){
     var bars = rectG.selectAll("rect")
                     .data(data);
     var barTexts = yAxisG.selectAll("text").data(data);
- 
+
     bars.enter()
     .append("rect")
       .attr("x", 0)
@@ -593,7 +610,7 @@ function tampilBarChart(data,yColumn){
         }).transition().delay(300)
           .attr("y",     function (d, i){
             return 4.6153 + i * (4.6153 + 18.46) })
-          .attr("width", function (d){ 
+          .attr("width", function (d){
             return xScale(Math.floor(Math.round(d.Jumlah_Migrasi/100)*100)); })
           .attr("height", 18.46)
 
@@ -660,18 +677,18 @@ function drawAnimation(provinsi){
   } else if(d3.select('#from').classed("btn-clicked")) {
     var arah = "keluar";
   }
-  
+
 
   d3.selectAll(".provinsi").classed("cntrClicked", false);
   d3.selectAll("."+provinsi).classed("cntrClicked", true);
   //d3.selectAll("."+provinsi").classed("active", false);
+  var jk = "Gabungan";
 
-  arusMigrasi(provinsi,arah);
-  //pieChart(provinsi,arah)
-  barChartTop5(provinsi, arah)
-  titleBar(provinsi, arah)
-  
-  
+  arusMigrasi(provinsi,arah,jk);
+  pieChart(provinsi,arah,jk);
+  barChartTop5(provinsi,arah,jk);
+  titleBar(provinsi, arah,jk);
+
 }
 
 
@@ -692,9 +709,19 @@ d3.select('#from').on("click", function(){
 });
 
 
-    function dblclicked_(d) {
+function zoomed() {
+  projection
+      .translate(zoom.translate())
+      .scale(zoom.scale());
+
+  g.selectAll("path")
+      .attr("d", path);
+}
+
+
+function dblclicked_(d) {
       var x, y, k;
-    
+
       if (d && centered !== d) {
         var centroid = path.centroid(d);
         x = centroid[0];
@@ -709,14 +736,17 @@ d3.select('#from').on("click", function(){
       }
       gMap.selectAll(".provinsi")
           .classed("active", centered && function(d) { return d === centered; });
-    
+
       gMap.transition()
           .duration(750)
           .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
-          .style("stroke-width", 1.5 / k + "px");
+          .style("stroke-width", 1.5 / k + "px")
+
+      gArrows.transition()
+              .duration(750)
+              .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+              .style("stroke-width", 1.5 / k + "px");
+
       d3.event.stopPropagation();
+
     }
-    
-
-  
-

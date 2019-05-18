@@ -1,0 +1,25 @@
+/* Main container */
+.overlay-image1 {
+ position: relative;
+ width: 100%;
+}
+/* Original image */
+.overlay-image1 .image {
+ display: block;
+ width: 100%;
+
+ height: auto;
+}
+/* Original text overlay */
+.overlay-image1 .text {
+ color: #fff;
+ font-size: 30px;
+ line-height: 1.5em;
+ text-shadow: 2px 2px 2px #000;
+ text-align: right;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-40%, -10%);
+ width: 100%;
+}

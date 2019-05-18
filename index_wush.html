@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)https://refugeemovements.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="https://refugeemovements.com/favicon.ico">
+    <base href=".">
+    <title>Visualisasi Data Interaktif</title>
+    <!-- D3.js-->
+    <script src="js/d3.js"></script>
+    <script src="js/d3-scale-chromatic.v1.min.js"></script>
+    <script src="js/topojson.js"></script>
+    <!-- jQuery -->
+     <script src="js/jquery.js"></script>
+     <script src="js/jquery-3.4.1.min.js"></script>
+     <!-- Bootstrap Core JavaScript -->
+     <script src="js/bootstrap.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="js/bootstrap.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="js/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="js/css_003.css" rel="stylesheet">
+    <link href="js/css_002.css" rel="stylesheet" type="text/css">
+    <link href="js/css.css" rel="stylesheet" type="text/css">
+    <!-- Theme CSS -->
+    <link href="js/grayscale.min.css" rel="stylesheet">
+    <!-- Own CSS -->
+    <link href="js/style.css" rel="stylesheet">
+    <link href="js/overlay.css" rel="stylesheet">
+	<link href="js/overlaylogo.css" rel="stylesheet">
+
+	<!-- Worldmap -->
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                   <i class="fa fa-bars fa-2x"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="http://localhost/Test2/index_wush.html#page-top">
+                   <!-- <i class="fa fa-play-circle"></i>--> <span class="light">Home</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="http://localhost/Test2/index_wush.html#umum">Gambaran Umum</a>
+                    </li>
+                    
+					<li>
+                        <a class="page-scroll" href="http://localhost/Test2/index_wush.html#peta-indo">Peta Indonesia</a>
+                    </li>
+
+                     <li>
+                        <a class="page-scroll" href="http://localhost/Test2/index_wush.html#teambanner">Tim</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+<!-- Intro Header -->
+<header class="overlay">
+
+	<div class="overlay-image">
+		<img src = "data/foto/visdat.jpg" alt="" width="100%">
+	<div class="text">Yang Mudik, hati-hati di Jalan<br>Yang Dihati, Jangan jalan-jalan
+	<p>#MudikBukanUdik</p></br>
+		<div class="col-md-8 col-md-offset-2">
+			<a href="http://localhost/Test2/index_wush.html#about" class="btn btn-rect page-scroll">
+            p e l a j a r i &nbsp&nbsp l e b i h &nbsp&nbsp l a n j u t
+            </a>
+		</div>
+	</div>
+	</div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="container content-section text-center">
+    <div class="row">
+		
+        <div class="col-lg-8 col-lg-offset-2 image-overlay">
+			<h2>Tentang Vi-TER <br> Visualisasi Data Interaktif</br></h2>
+            <p>Vi-TER merupakan laman yang menyajikan visualisasi data interaktif yang dikembangkan oleh 6 Mahasiswa Politeknik Statistika STIS Kelas 3KS1 Tahun Akademik 2018/2019. Istilah Vi-TER sendiri memiliki arti yaitu Visualisasi Interaktif yang sesuai dengan tema yang kita ambil dalam membangun laman ini. Salah satu tujuan dari Pembangunan dan Pengembangan laman ini adalah untuk melengkapi tugas akhir Mata Kuliah Visualisasi Data yang diampu oleh Bp. Farid Ridho MT.</p>
+			<p>Vi-TER 1.0 telah sukses dikembangkan dengan mengambil topik "Sosial-Kependudukan" yang menitikberatkan pada migrasi penduduk setiap Provinsi di Indonesia dan beberapa efek yang ditimbulkannya. Diantaranya adalah kepadatan penduduk dan rasio ketergantungan.</p>
+            <p>Data yang kami gunakan diambil dari Laman Resmi <a href="http://bps.go.id" target="_blank"> Badan Pusat Statistik</a> dan diolah berdasarkan konten yang kami butuhkan dalam pembangunan serta pengembangan laman ini. </p>
+        </div>
+		
+    </div>
+</section>
+
+
+ <section id="ho" class="content-section text-center">
+    <div class="download-section">
+        <div class="container">
+		<div class ="overlay-image1">
+		<img src = "data/foto/viter.png" alt="" width="12%">
+		</div>
+        </div>
+    </div>
+</section>
+
+ <!-- Chord Diagram Section -->
+
+ <section class="container content-section text-center">
+    <div id="umum" class="row">
+          <h2>Gambaran Umum Migrasi di Indonesia<br> Melalui Chord Diagram</br></h2>
+          <iframe src="js/Chord/chord.html" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" width="900" height="800">
+          </iframe>
+    </div>
+</section>
+
+
+<!-- tempat map indonesia -->
+<section class="content-section text-center">
+    <div id="awal" class="download-section">
+    </div>
+</section>
+
+<section class="container content-section text-center">
+  <div id="peta-indo" class="row">
+    <div id="btn-group1" class="col-lg col-lg-offset-">
+      <h2>VISUALISASI MIGRASI DI INDONESIA</h2>
+          <p>Pilih Provinsi dan jenis migrasi yang ingin ditampilkan</p>
+          <div class="btn-group">
+          <button id="to" type="button" class="btn btn-default btn-lg">IN</button>
+          <button id="from" type="button" class="btn btn-default btn-lg btn-clicked">OUT</button>
+  </div>
+</div>
+</div>
+</section>
+
+<section id="indo-overview">
+    <div class="container content-section text-center">
+        <div class="col-lg-8 col-lg-offset-2">
+        </div>
+        </div>
+</section>
+
+<!-- VISUALISASI FARHAN (PER PROVINSI) -->
+ <section id="hoa" class="content-section text-center">
+    <div class="download-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Narasi dan visualisasi provinsi</h2>
+                <a href="http://localhost/Test2/index_wush.html#narasi-prov" id="jawa bali" type="button" class="btn btn-default btn-lg page-scroll">Jawa &amp Bali</a>
+                <a href="http://localhost/Test2/index_wush.html#narasi-prov" id="sumatera" type="button" class="btn btn-default btn-lg page-scroll">Sumatera</a>
+                <a href="http://localhost/Test2/index_wush.html#narasi-prov" id="kalimantan" type="button" class="btn btn-default btn-lg page-scroll">Kalimantan</a>
+                <a href="http://localhost/Test2/index_wush.html#narasi-prov" id="sulawesi" type="button" class="btn btn-default btn-lg page-scroll">Sulawesi</a>
+                <a href="http://localhost/Test2/index_wush.html#narasi-prov" id="idn-tim" type="button" class="btn btn-default btn-lg page-scroll">Indonesia Timur</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+ <!-- Data Description -->
+<section id="narasi-prov" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+			<h1><br></br><p>  </p><br></br><p>  </p><br></br></h1>
+			<h2></h2>
+            <h2>Oops, mohon maaf <br>Proyek Sedang Dalam Pengembangan </br></h2>
+            <p>Minta doanya biar kita cepet rilis Vi-TER 2.0 ya teman-teman :( <br>Sebenarnya kodingannya dah ada, cuma beda versi dan waktu presentasi tinggal hitungan jari, jikalau dipaksa tak sanggup raga kami :(</br></p>
+			<p>Seperti halnya diri ini, yang cuma bisa merelakanmu pergi, boro-boro beliin kamu lambhorgini, diriku hanya bisa memberi sesuap nasi<br>Tapi kan dirimu juga bukan bidadari, ah walaupun begitu, namamu tetap terukir dalam hati</br></p>
+			<p> HIYA HIYA :p </p>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<!-- Team Banner -->
+<section id="teambanner" class="content-section text-center">
+    <div class="team-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Our team</h2>
+                <img src="data/foto/viter.png" alt="" width="30%"> <!-- INI  SOURCE IMAGE NYA JUGA DIRUBAH -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Description -->
+<section id="contact" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+            <h2>TENTANG KAMI</h2>
+            <p>Laman ini dibentuk oleh Tim yang beranggotakan</p>
+			<p>- Aldo Leofiro Irfiansyah &nbsp</p>
+			<p>- Alha Ahmada Belasae &nbsp&nbsp&nbsp&nbsp&nbsp</p>
+			<p>- Farhan Anshari Arsyi &nbsp&nbsp&nbsp&nbsp</p>
+			<p>- Fella Ulandari &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+			<p>- Intan Eka Debora Silaban</p>
+			<p>- Rachmat Dhany Ichsan &nbsp&nbsp&nbsp&nbsp</p>
+			<br></br>
+			<br></br>
+			<p>Vi-TER Version 1.0.0: Last Update 08th of May 2019.</p>
+        </div>
+    </div>
+</section>
+
+
+ <!-- Worldmap -->
+ <script src="js/test.js"></script><div class="tooltip" style="opacity: 0;"></div>
+<!-- Footer -->
+
+<footer>
+    <section id="footer" class="container content-section text-center">
+        <div class="col-lg">
+                <p>Copyright © Politeknik Statistika STIS. All right reserved.</p>
+         </div>
+    </section>
+</footer>
+
+</body></html>
